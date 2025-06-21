@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "motomod",
+	"version": "${version}",
+	"name": "Moto Mod",
+	"description": "A mod only about moto...",
+	"authors": [
+		"Tris, Pyloufass"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/motomod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.pyloufass.motomod.MotoMod"
+		],
+		"fabric-datagen": [
+			"com.pyloufass.motomod.MotoModDataGenerator"
+		],
+		"client": [
+			"com.pyloufass.motomod.MotoModClient"
+		]
+	},
+	"mixins": [
+		"motomod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
