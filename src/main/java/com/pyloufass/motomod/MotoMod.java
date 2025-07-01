@@ -3,6 +3,7 @@ package com.pyloufass.motomod;
 import com.pyloufass.motomod.item.ModItems;
 import com.pyloufass.motomod.status.ModStatus;
 import net.fabricmc.api.ModInitializer;
+import com.pyloufass.motomod.item.ModItemGroups;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +15,7 @@ public class MotoMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModStatus.registerEffects();
 	}

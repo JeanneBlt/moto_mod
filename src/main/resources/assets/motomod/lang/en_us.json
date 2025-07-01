@@ -2,5 +2,6 @@
   "item.motomod.sapphorit_shard": "Sapphorit Shard",
   "item.motomod.yellow_hat": "Yellow Hat",
   "item.motomod.bike_helmet": "Bike Helmet",
-  "effect.motomod.colorfull": "You're colorfull!"
+  "effect.motomod.colorfull": "You're colorfull!",
+  "itemgroup.motomod.sapphorit_shard_items": "Moto Mod Items"
 }

@@ -35,10 +35,5 @@ public class ModItems {
     public static void registerModItems() {
         MotoMod.LOGGER.info("Registering Mod Items for " + MotoMod.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(YELLOW_HAT);
-            entries.add(BIKE_HELMET);
-            entries.add(SAPPHORIT_SHARD);
-        });
     }
 }
