@@ -8,8 +8,8 @@ import net.minecraft.util.math.Vec3d;
 
 // Climbing Effect by SameDifferent: https://github.com/samedifferent/TrickOrTreat/blob/master/LICENSE
 // MIT License!
-public class SlimeyEffect extends StatusEffect {
-    public SlimeyEffect(StatusEffectCategory category, int color) {
+public class ColorfullStatus extends StatusEffect {
+    public ColorfullStatus(StatusEffectCategory category, int color) {
         super(category, color);
     }
 

@@ -1,27 +1,36 @@
 package com.pyloufass.motomod.item;
 
 import com.pyloufass.motomod.MotoMod;
+import com.pyloufass.motomod.item.custom.ModArmorItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.component.type.TooltipDisplayComponent;
+import net.minecraft.item.*;
+import net.minecraft.item.equipment.EquipmentType;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
+import java.util.function.Consumer;
+import java.util.function.Function;
+
 public class ModItems {
-    public static final Item GAY_HAT=registerItem("gay_hat",new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MotoMod.MOD_ID,"gay_hat")))));
 
-    private static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, Identifier.of(MotoMod.MOD_ID, name), item);
+    public static final Item YELLOW_HAT = registerItem("yellow_hat",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.YELLOW_HAT_MATERIAL, EquipmentType.HELMET)));
+
+    private static Item registerItem(String name, Function<Item.Settings, Item> function) {
+        return Registry.register(Registries.ITEM, Identifier.of(MotoMod.MOD_ID, name),
+                function.apply(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MotoMod.MOD_ID, name)))));
     }
-
-    public  static void registerModItems() {
+    public static void registerModItems() {
         MotoMod.LOGGER.info("Registering Mod Items for " + MotoMod.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(GAY_HAT);
+            entries.add(YELLOW_HAT);
         });
     }
 }

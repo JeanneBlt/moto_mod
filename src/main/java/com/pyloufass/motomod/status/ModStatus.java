@@ -10,12 +10,9 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
-public class ModEffects {
+public class ModStatus {
     public static final RegistryEntry<StatusEffect> COLORFULL = registerStatusEffect("colorfull",
-            new SlimeyEffect(StatusEffectCategory.NEUTRAL, 0x36ebab)
-                    .addAttributeModifier(EntityAttributes.MOVEMENT_SPEED,
-                            Identifier.of(MotoMod.MOD_ID, "colorfull"), -0.25f,
-                            EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+            new ColorfullStatus(StatusEffectCategory.NEUTRAL, 0xe6e6fa));
 
 
     private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {
