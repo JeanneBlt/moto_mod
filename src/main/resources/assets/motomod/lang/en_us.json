@@ -1,4 +1,6 @@
 {
+  "item.motomod.sapphorit_shard": "Sapphorit Shard",
   "item.motomod.yellow_hat": "Yellow Hat",
-  "item.motomod.bike_helmet": "Bike Helmet"
+  "item.motomod.bike_helmet": "Bike Helmet",
+  "effect.motomod.colorfull": "You're colorfull!"
 }

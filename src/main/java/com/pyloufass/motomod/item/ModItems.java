@@ -19,6 +19,10 @@ import java.util.function.Function;
 
 public class ModItems {
 
+    //items
+    public static final Item SAPPHORIT_SHARD = registerItem("sapphorit_shard", Item::new);
+
+    //clothes
     public static final Item YELLOW_HAT = registerItem("yellow_hat",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.YELLOW_HAT_MATERIAL, EquipmentType.HELMET)));
     public static final Item BIKE_HELMET = registerItem("bike_helmet",
@@ -34,6 +38,7 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(YELLOW_HAT);
             entries.add(BIKE_HELMET);
+            entries.add(SAPPHORIT_SHARD);
         });
     }
 }
