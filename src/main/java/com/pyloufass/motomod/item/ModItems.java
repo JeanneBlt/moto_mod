@@ -21,6 +21,8 @@ public class ModItems {
 
     public static final Item YELLOW_HAT = registerItem("yellow_hat",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.YELLOW_HAT_MATERIAL, EquipmentType.HELMET)));
+    public static final Item BIKE_HELMET = registerItem("bike_helmet",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.BIKE_HELMET_MATERIAL, EquipmentType.HELMET)));
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {
         return Registry.register(Registries.ITEM, Identifier.of(MotoMod.MOD_ID, name),
@@ -31,6 +33,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(YELLOW_HAT);
+            entries.add(BIKE_HELMET);
         });
     }
 }

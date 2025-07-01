@@ -11,6 +11,7 @@ public class ModTags {
 
     public static class Items {
         public static final TagKey<Item> YELLOW_HAT_REPAIR = createTag("yellow_hat_repair");
+        public static final TagKey<Item> BIKE_HELMET_REPAIR = createTag("bike_helmet_repair");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(MotoMod.MOD_ID, name));
