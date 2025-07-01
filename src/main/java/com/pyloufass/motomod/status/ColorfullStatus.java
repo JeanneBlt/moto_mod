@@ -15,12 +15,6 @@ public class ColorfullStatus extends StatusEffect {
 
     @Override
     public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
-        if(entity.horizontalCollision) {
-            Vec3d initialVec = entity.getVelocity();
-            Vec3d climbVec = new Vec3d(initialVec.x, 0.2D, initialVec.z);
-            entity.setVelocity(climbVec.multiply(0.96D));
-            return true;
-        }
 
         return super.applyUpdateEffect(world, entity, amplifier);
     }
