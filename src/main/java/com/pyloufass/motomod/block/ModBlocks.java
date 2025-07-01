@@ -23,7 +23,7 @@ public class ModBlocks {
 
     public static final Block SAPPHORIT_SHARD_BLOCK = registerBlock("sapphorit_shard_block",
             properties -> new Block(properties.strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
 
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
