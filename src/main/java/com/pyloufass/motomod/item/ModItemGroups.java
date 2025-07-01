@@ -1,6 +1,7 @@
 package com.pyloufass.motomod.item;
 
 import com.pyloufass.motomod.MotoMod;
+import com.pyloufass.motomod.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import com.pyloufass.motomod.MotoMod;
 import net.minecraft.item.ItemGroup;
@@ -19,6 +20,15 @@ public class ModItemGroups {
                         entries.add(ModItems.YELLOW_HAT);
                         entries.add(ModItems.BIKE_HELMET);
                         entries.add(ModItems.SAPPHORIT_SHARD);
+
+                    }).build());
+
+    public static final ItemGroup SAPPHORIT_SHARD_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(MotoMod.MOD_ID, "sapphorit_shard_blocks"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.SAPPHORIT_SHARD_BLOCK))
+                    .displayName(Text.translatable("itemgroup.motomod.sapphorit_shard_block"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.SAPPHORIT_SHARD_BLOCK);
 
                     }).build());
 
