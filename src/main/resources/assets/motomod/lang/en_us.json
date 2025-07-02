@@ -6,6 +6,23 @@
   "effect.motomod.colorfull": "You're colorfull!",
 
   "block.motomod.sapphorit_shard_block": "Sapphorit Cristallium",
+  "block.motomod.black_crystallium_block": "Black Cristallium",
+  "block.motomod.blue_crystallium_block": "Blue Cristallium",
+  "block.motomod.brown_crystallium_block": "Brown Cristallium",
+  "block.motomod.cyan_crystallium_block": "Cyan Cristallium",
+  "block.motomod.gray_crystallium_block": "Gray Cristallium",
+  "block.motomod.green_crystallium_block": "Green Cristallium",
+  "block.motomod.light_blue_crystallium_block": "Light Blue Cristallium",
+  "block.motomod.light_gray_crystallium_block": "Light Gray Cristallium",
+  "block.motomod.lime_crystallium_block": "Lime Cristallium",
+  "block.motomod.magenta_crystallium_block": "Magenta Cristallium",
+  "block.motomod.orange_crystallium_block": "Orange Cristallium",
+  "block.motomod.pink_crystallium_block": "Pink Cristallium",
+  "block.motomod.purple_crystallium_block": "Purple Cristallium",
+  "block.motomod.red_crystallium_block": "Red Cristallium",
+  "block.motomod.white_crystallium_block": "White Cristallium",
+  "block.motomod.yellow_crystallium_block": "Yellow Cristallium",
+
 
   "itemgroup.motomod.sapphorit_shard_block":  "Moto Mod Blocks",
   "itemgroup.motomod.sapphorit_shard_items": "Moto Mod Items"

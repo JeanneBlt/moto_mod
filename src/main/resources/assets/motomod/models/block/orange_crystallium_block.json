@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "motomod:block/orange_crystallium_block"
+  }
+}

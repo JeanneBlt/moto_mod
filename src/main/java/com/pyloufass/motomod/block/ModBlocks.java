@@ -24,6 +24,54 @@ public class ModBlocks {
     public static final Block SAPPHORIT_SHARD_BLOCK = registerBlock("sapphorit_shard_block",
             properties -> new Block(properties.strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block BLACK_CRYSTALLIUM_BLOCK = registerBlock("black_crystallium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block BLUE_CRYSTALLIUM_BLOCK = registerBlock("blue_crystallium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block BROWN_CRYSTALLIUM_BLOCK = registerBlock("brown_crystallium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block CYAN_CRYSTALLIUM_BLOCK = registerBlock("cyan_crystallium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block GRAY_CRYSTALLIUM_BLOCK = registerBlock("gray_crystallium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block GREEN_CRYSTALLIUM_BLOCK = registerBlock("green_crystallium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block LIGHT_CYAN_CRYSTALLIUM_BLOCK = registerBlock("light_blue_crystallium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block LIGHT_GREY_CRYSTALLIUM_BLOCK = registerBlock("light_gray_crystallium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block LIME_CRYSTALLIUM_BLOCK = registerBlock("lime_crystallium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block MAGENTA_CRYSTALLIUM_BLOCK = registerBlock("magenta_crystallium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block ORANGE_CRYSTALLIUM_BLOCK = registerBlock("orange_crystallium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block PINK_CRYSTALLIUM_BLOCK = registerBlock("pink_crystallium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block PURPLE_CRYSTALLIUM_BLOCK = registerBlock("purple_crystallium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block RED_CRYSTALLIUM_BLOCK = registerBlock("red_crystallium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block WHITE_CRYSTALLIUM_BLOCK = registerBlock("white_crystallium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block YELLOW_CRYSTALLIUM_BLOCK = registerBlock("yellow_crystallium_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
 
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {

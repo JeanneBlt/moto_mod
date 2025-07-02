@@ -1,5 +1,6 @@
 package com.pyloufass.motomod;
 
+import com.pyloufass.motomod.datagen.ModBlockTagProvider;
 import com.pyloufass.motomod.datagen.ModItemTagProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -11,5 +12,6 @@ public class MotoModDataGenerator implements DataGeneratorEntrypoint {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModItemTagProvider::new);
+		pack.addProvider(ModBlockTagProvider::new);
 	}
 }
