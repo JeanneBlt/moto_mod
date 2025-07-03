@@ -17,9 +17,31 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.SAPPHORIT_SHARD))
                     .displayName(Text.translatable("itemgroup.motomod.sapphorit_shard_items"))
                     .entries((displayContext, entries) -> {
+
+                        //armors
                         entries.add(ModItems.YELLOW_HAT);
                         entries.add(ModItems.BIKE_HELMET);
+
+                        //minerals
                         entries.add(ModItems.SAPPHORIT_SHARD);
+
+                        //paintbrushes
+                        entries.add(ModItems.PAINTBRUSH_BLACK);
+                        entries.add(ModItems.PAINTBRUSH_BLUE);
+                        entries.add(ModItems.PAINTBRUSH_BROWN);
+                        entries.add(ModItems.PAINTBRUSH_CYAN);
+                        entries.add(ModItems.PAINTBRUSH_GRAY);
+                        entries.add(ModItems.PAINTBRUSH_GREEN);
+                        entries.add(ModItems.PAINTBRUSH_LIGHT_BLUE);
+                        entries.add(ModItems.PAINTBRUSH_LIGHT_GRAY);
+                        entries.add(ModItems.PAINTBRUSH_LIME);
+                        entries.add(ModItems.PAINTBRUSH_MAGENTA);
+                        entries.add(ModItems.PAINTBRUSH_ORANGE);
+                        entries.add(ModItems.PAINTBRUSH_PINK);
+                        entries.add(ModItems.PAINTBRUSH_PURPLE);
+                        entries.add(ModItems.PAINTBRUSH_RED);
+                        entries.add(ModItems.PAINTBRUSH_WHITE);
+                        entries.add(ModItems.PAINTBRUSH_YELLOW);
 
                     }).build());
 

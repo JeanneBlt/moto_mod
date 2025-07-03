@@ -22,7 +22,25 @@ public class ModItems {
     //items
     public static final Item SAPPHORIT_SHARD = registerItem("sapphorit_shard", Item::new);
 
-    //clothes
+    //paintbrushes
+    public static final Item PAINTBRUSH_BLACK = registerItem("paintbrush_black", Item::new);
+    public static final Item PAINTBRUSH_BLUE = registerItem("paintbrush_blue", Item::new);
+    public static final Item PAINTBRUSH_BROWN = registerItem("paintbrush_brown", Item::new);
+    public static final Item PAINTBRUSH_CYAN = registerItem("paintbrush_cyan", Item::new);
+    public static final Item PAINTBRUSH_GRAY = registerItem("paintbrush_gray", Item::new);
+    public static final Item PAINTBRUSH_GREEN = registerItem("paintbrush_green", Item::new);
+    public static final Item PAINTBRUSH_LIGHT_BLUE = registerItem("paintbrush_light_blue", Item::new);
+    public static final Item PAINTBRUSH_LIGHT_GRAY = registerItem("paintbrush_light_gray", Item::new);
+    public static final Item PAINTBRUSH_LIME = registerItem("paintbrush_lime", Item::new);
+    public static final Item PAINTBRUSH_MAGENTA = registerItem("paintbrush_magenta", Item::new);
+    public static final Item PAINTBRUSH_ORANGE = registerItem("paintbrush_orange", Item::new);
+    public static final Item PAINTBRUSH_PINK = registerItem("paintbrush_pink", Item::new);
+    public static final Item PAINTBRUSH_PURPLE = registerItem("paintbrush_purple", Item::new);
+    public static final Item PAINTBRUSH_RED = registerItem("paintbrush_red", Item::new);
+    public static final Item PAINTBRUSH_WHITE = registerItem("paintbrush_white", Item::new);
+    public static final Item PAINTBRUSH_YELLOW = registerItem("paintbrush_yellow", Item::new);
+
+    //armors
     public static final Item YELLOW_HAT = registerItem("yellow_hat",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.YELLOW_HAT_MATERIAL, EquipmentType.HELMET)));
     public static final Item BIKE_HELMET = registerItem("bike_helmet",
