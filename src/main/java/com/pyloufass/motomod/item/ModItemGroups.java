@@ -50,7 +50,7 @@ public class ModItemGroups {
     public static final ItemGroup SAPPHORIT_SHARD_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(MotoMod.MOD_ID, "sapphorit_blocks"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.SAPPHORIT_BLOCK))
-                    .displayName(Text.translatable("itemgroup.motomod.sapphorit_shard_block"))
+                    .displayName(Text.translatable("itemgroup.motomod.sapphorit_block"))
                     .entries((displayContext, entries) -> {
 
                         //blocks
@@ -69,7 +69,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CYAN_CRYSTALLIUM_BLOCK);
                         entries.add(ModBlocks.GRAY_CRYSTALLIUM_BLOCK);
                         entries.add(ModBlocks.GREEN_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.LIGHT_CYAN_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_BLOCK);
                         entries.add(ModBlocks.LIGHT_GREY_CRYSTALLIUM_BLOCK);
                         entries.add(ModBlocks.LIME_CRYSTALLIUM_BLOCK);
                         entries.add(ModBlocks.MAGENTA_CRYSTALLIUM_BLOCK);

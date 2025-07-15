@@ -17,6 +17,42 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(ModBlocks.SAPPHORIT_CRYSTALLIUM_BLOCK);
+                .add(ModBlocks.SAPPHORIT_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.BLACK_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.BLUE_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.BROWN_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.CYAN_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.GRAY_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.LIGHT_GREY_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.LIME_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.MAGENTA_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.ORANGE_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.PINK_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.PURPLE_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.RED_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.SAPPHORIT_BLOCK)
+                .add(ModBlocks.WHITE_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.YELLOW_CRYSTALLIUM_BLOCK);
+
+
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
+                .add(ModBlocks.SAPPHORIT_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.BLACK_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.BLUE_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.BROWN_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.CYAN_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.GRAY_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.LIGHT_GREY_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.LIME_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.MAGENTA_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.ORANGE_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.PINK_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.PURPLE_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.RED_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.SAPPHORIT_BLOCK)
+                .add(ModBlocks.WHITE_CRYSTALLIUM_BLOCK)
+                .add(ModBlocks.YELLOW_CRYSTALLIUM_BLOCK);
     }
 }

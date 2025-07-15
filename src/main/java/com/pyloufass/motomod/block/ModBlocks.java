@@ -56,7 +56,7 @@ public class ModBlocks {
     public static final Block GREEN_CRYSTALLIUM_BLOCK = registerBlock("green_crystallium_block",
             properties -> new Block(properties.strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
-    public static final Block LIGHT_CYAN_CRYSTALLIUM_BLOCK = registerBlock("light_blue_crystallium_block",
+    public static final Block LIGHT_BLUE_CRYSTALLIUM_BLOCK = registerBlock("light_blue_crystallium_block",
             properties -> new Block(properties.strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
     public static final Block LIGHT_GREY_CRYSTALLIUM_BLOCK = registerBlock("light_gray_crystallium_block",
