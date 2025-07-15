@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "minecraft:block/soulsand"
+    },
+    "age=1": {
+      "model": "motomod:block/small_sapphorit_lotus"
+    },
+    "age=2": {
+      "model": "motomod:block/medium_sapphorit_lotus"
+    },
+    "age=3": {
+      "model": "motomod:block/sapphorit_lotus"
+    }
+  }
+}

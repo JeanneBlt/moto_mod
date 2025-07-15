@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "minecraft:brush",
+    "minecraft:light_blue_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "motomod:paintbrush_light_blue"
+  }
+}

@@ -25,7 +25,7 @@ public class ModArmorItem extends Item {
     private static final Map<ArmorMaterial, List<StatusEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, List<StatusEffectInstance>>())
                     .put(ModArmorMaterials.YELLOW_HAT_MATERIAL,
-                            List.of(new StatusEffectInstance(ModStatus.COLORFULL, 200, 0, false, true)))
+                            List.of(new StatusEffectInstance(ModStatus.COLORFULL, 99999999, 0, false, true)))
                     .build();
 
 
@@ -37,7 +37,7 @@ public class ModArmorItem extends Item {
 //    public void inventoryTick(ItemStack stack, ServerWorld world, Entity entity, @Nullable EquipmentSlot slot) {
 //        if(!world.isClient()) {
 //            if(entity instanceof PlayerEntity player) {
-//                if(hasFullSuitOfArmorOn(player)) {
+//                if(hasHelmetArmorOn(player)) {
 //                    evaluateArmorEffects(player);
 //                }
 //            }
@@ -67,29 +67,18 @@ public class ModArmorItem extends Item {
 //            }
 //        }
 //    }
-
-//    private boolean hasFullSuitOfArmorOn(PlayerEntity player) {
-//        ItemStack boots = player.getInventory().getStack(EquipmentSlot.FEET.getIndex());
-//        ItemStack leggings = player.getInventory().getStack(EquipmentSlot.LEGS.getIndex());
-//        ItemStack chestplate = player.getInventory().getStack(EquipmentSlot.CHEST.getIndex());
+//
+//    private boolean hasHelmetArmorOn(PlayerEntity player) {
 //        ItemStack helmet = player.getInventory().getStack(EquipmentSlot.HEAD.getIndex());
 //
-//        return !helmet.isEmpty() && !chestplate.isEmpty()
-//                && !leggings.isEmpty() && !boots.isEmpty();
+//        return !helmet.isEmpty();
 //    }
 //
 //    private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
-//        ItemStack boots = player.getInventory().getStack(EquipmentSlot.FEET.getIndex());
-//        ItemStack leggings = player.getInventory().getStack(EquipmentSlot.LEGS.getIndex());
-//        ItemStack chestplate = player.getInventory().getStack(EquipmentSlot.CHEST.getIndex());
 //        ItemStack helmet = player.getInventory().getStack(EquipmentSlot.HEAD.getIndex());
 //
-//        EquippableComponent equippableComponentBoots = boots.getComponents().get(DataComponentTypes.EQUIPPABLE);
-//        EquippableComponent equippableComponentLeggings = leggings.getComponents().get(DataComponentTypes.EQUIPPABLE);
-//        EquippableComponent equippableComponentBreastplate = chestplate.getComponents().get(DataComponentTypes.EQUIPPABLE);
 //        EquippableComponent equippableComponentHelmet = helmet.getComponents().get(DataComponentTypes.EQUIPPABLE);
 //
-//        return equippableComponentBoots.assetId().get().equals(material.assetId()) && equippableComponentLeggings.assetId().get().equals(material.assetId()) &&
-//                equippableComponentBreastplate.assetId().get().equals(material.assetId()) && equippableComponentHelmet.assetId().get().equals(material.assetId());
+//        return equippableComponentHelmet.assetId().get().equals(material.assetId());
 //    }
 }

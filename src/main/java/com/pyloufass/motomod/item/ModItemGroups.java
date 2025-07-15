@@ -24,6 +24,8 @@ public class ModItemGroups {
 
                         //minerals
                         entries.add(ModItems.SAPPHORIT_SHARD);
+                        entries.add(ModItems.SAPPHORIT_CARROT);
+                        entries.add(ModItems.SAPPHORIT_SEED);
 
                         //paintbrushes
                         entries.add(ModItems.PAINTBRUSH_BLACK);
@@ -46,13 +48,21 @@ public class ModItemGroups {
                     }).build());
 
     public static final ItemGroup SAPPHORIT_SHARD_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(MotoMod.MOD_ID, "sapphorit_shard_blocks"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.SAPPHORIT_SHARD_BLOCK))
+            Identifier.of(MotoMod.MOD_ID, "sapphorit_blocks"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.SAPPHORIT_BLOCK))
                     .displayName(Text.translatable("itemgroup.motomod.sapphorit_shard_block"))
                     .entries((displayContext, entries) -> {
 
                         //blocks
-                        entries.add(ModBlocks.SAPPHORIT_SHARD_BLOCK);
+                        entries.add(ModBlocks.SAPPHORIT_BLOCK);
+
+                        //lotus
+                        entries.add(ModBlocks.SAPPHORIT_LOTUS);
+                        entries.add(ModBlocks.MEDIUM_SAPPHORIT_LOTUS);
+                        entries.add(ModBlocks.SMALL_SAPPHORIT_LOTUS);
+
+                        //crystallium blocks
+                        entries.add(ModBlocks.SAPPHORIT_CRYSTALLIUM_BLOCK);
                         entries.add(ModBlocks.BLACK_CRYSTALLIUM_BLOCK);
                         entries.add(ModBlocks.BLUE_CRYSTALLIUM_BLOCK);
                         entries.add(ModBlocks.BROWN_CRYSTALLIUM_BLOCK);

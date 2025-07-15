@@ -21,7 +21,21 @@ import java.util.function.Function;
 
 public class ModBlocks {
 
-    public static final Block SAPPHORIT_SHARD_BLOCK = registerBlock("sapphorit_shard_block",
+    public static final Block SAPPHORIT_BLOCK = registerBlock("sapphorit_block",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+
+    public static final Block SAPPHORIT_LOTUS = registerBlock("sapphorit_lotus",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block MEDIUM_SAPPHORIT_LOTUS = registerBlock("medium_sapphorit_lotus",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block SMALL_SAPPHORIT_LOTUS = registerBlock("small_sapphorit_lotus",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+
+    public static final Block SAPPHORIT_CRYSTALLIUM_BLOCK = registerBlock("sapphorit_crystallium_block",
             properties -> new Block(properties.strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
     public static final Block BLACK_CRYSTALLIUM_BLOCK = registerBlock("black_crystallium_block",

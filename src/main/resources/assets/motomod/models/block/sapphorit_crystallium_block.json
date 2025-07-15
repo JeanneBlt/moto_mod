@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "motomod:block/sapphorit_shard_block"
+    "all": "motomod:block/sapphorit_crystallium_block"
   }
 }
