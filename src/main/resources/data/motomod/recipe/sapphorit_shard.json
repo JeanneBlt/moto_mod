@@ -2,10 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "motomod:sapphorit_shard"
+    "motomod:sapphorit_block"
   ],
   "result": {
     "count": 9,
-    "id": "motomod:sapphorit_block"
+    "id": "motomod:sapphorit_shard"
   }
 }

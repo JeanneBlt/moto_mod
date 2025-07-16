@@ -14,6 +14,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
@@ -59,7 +60,7 @@ public class ModBlocks {
     public static final Block LIGHT_BLUE_CRYSTALLIUM_BLOCK = registerBlock("light_blue_crystallium_block",
             properties -> new Block(properties.strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
-    public static final Block LIGHT_GREY_CRYSTALLIUM_BLOCK = registerBlock("light_gray_crystallium_block",
+    public static final Block LIGHT_GRAY_CRYSTALLIUM_BLOCK = registerBlock("light_gray_crystallium_block",
             properties -> new Block(properties.strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
     public static final Block LIME_CRYSTALLIUM_BLOCK = registerBlock("lime_crystallium_block",
@@ -87,6 +88,26 @@ public class ModBlocks {
             properties -> new Block(properties.strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
 
+    public static Block getCrystalliumBlock(DyeColor color) {
+        return switch (color) {
+            case BLACK -> BLACK_CRYSTALLIUM_BLOCK;
+            case BLUE -> BLUE_CRYSTALLIUM_BLOCK;
+            case BROWN -> BROWN_CRYSTALLIUM_BLOCK;
+            case CYAN -> CYAN_CRYSTALLIUM_BLOCK;
+            case GRAY -> GRAY_CRYSTALLIUM_BLOCK;
+            case GREEN -> GREEN_CRYSTALLIUM_BLOCK;
+            case LIGHT_BLUE -> LIGHT_BLUE_CRYSTALLIUM_BLOCK;
+            case LIGHT_GRAY -> LIGHT_GRAY_CRYSTALLIUM_BLOCK;
+            case LIME -> LIME_CRYSTALLIUM_BLOCK;
+            case MAGENTA -> MAGENTA_CRYSTALLIUM_BLOCK;
+            case ORANGE -> ORANGE_CRYSTALLIUM_BLOCK;
+            case PINK -> PINK_CRYSTALLIUM_BLOCK;
+            case PURPLE -> PURPLE_CRYSTALLIUM_BLOCK;
+            case RED -> RED_CRYSTALLIUM_BLOCK;
+            case WHITE -> WHITE_CRYSTALLIUM_BLOCK;
+            case YELLOW -> YELLOW_CRYSTALLIUM_BLOCK;
+        };
+    }
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
         Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MotoMod.MOD_ID, name))));

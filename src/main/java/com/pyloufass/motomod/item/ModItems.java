@@ -1,20 +1,20 @@
 package com.pyloufass.motomod.item;
 
 import com.pyloufass.motomod.MotoMod;
+import com.pyloufass.motomod.block.ModBlocks;
+import com.pyloufass.motomod.item.custom.paintbrush.DyeBlockMappings;
+import com.pyloufass.motomod.item.custom.paintbrush.PaintBrushItem;
 import com.pyloufass.motomod.item.custom.ModArmorItem;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.component.type.TooltipDisplayComponent;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.text.Text;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
-
-import java.util.function.Consumer;
+import java.util.Map;
 import java.util.function.Function;
 
 public class ModItems {
@@ -25,22 +25,39 @@ public class ModItems {
     public static final Item SAPPHORIT_SEED = registerItem("sapphorit_seed", Item::new);
 
     //paintbrushes
-    public static final Item PAINTBRUSH_BLACK = registerItem("paintbrush_black", Item::new);
-    public static final Item PAINTBRUSH_BLUE = registerItem("paintbrush_blue", Item::new);
-    public static final Item PAINTBRUSH_BROWN = registerItem("paintbrush_brown", Item::new);
-    public static final Item PAINTBRUSH_CYAN = registerItem("paintbrush_cyan", Item::new);
-    public static final Item PAINTBRUSH_GRAY = registerItem("paintbrush_gray", Item::new);
-    public static final Item PAINTBRUSH_GREEN = registerItem("paintbrush_green", Item::new);
-    public static final Item PAINTBRUSH_LIGHT_BLUE = registerItem("paintbrush_light_blue", Item::new);
-    public static final Item PAINTBRUSH_LIGHT_GRAY = registerItem("paintbrush_light_gray", Item::new);
-    public static final Item PAINTBRUSH_LIME = registerItem("paintbrush_lime", Item::new);
-    public static final Item PAINTBRUSH_MAGENTA = registerItem("paintbrush_magenta", Item::new);
-    public static final Item PAINTBRUSH_ORANGE = registerItem("paintbrush_orange", Item::new);
-    public static final Item PAINTBRUSH_PINK = registerItem("paintbrush_pink", Item::new);
-    public static final Item PAINTBRUSH_PURPLE = registerItem("paintbrush_purple", Item::new);
-    public static final Item PAINTBRUSH_RED = registerItem("paintbrush_red", Item::new);
-    public static final Item PAINTBRUSH_WHITE = registerItem("paintbrush_white", Item::new);
-    public static final Item PAINTBRUSH_YELLOW = registerItem("paintbrush_yellow", Item::new);
+    public static final Item PAINTBRUSH_BLACK = registerItem("paintbrush_black", setting -> new PaintBrushItem(setting.maxDamage(32),
+            DyeBlockMappings.generateColorMapping(DyeColor.BLACK)));
+    public static final Item PAINTBRUSH_BLUE = registerItem("paintbrush_blue", setting -> new PaintBrushItem(setting.maxDamage(32),
+            DyeBlockMappings.generateColorMapping(DyeColor.BLUE)));
+    public static final Item PAINTBRUSH_BROWN = registerItem("paintbrush_brown", setting -> new PaintBrushItem(setting.maxDamage(32),
+            DyeBlockMappings.generateColorMapping(DyeColor.BROWN)));
+    public static final Item PAINTBRUSH_CYAN = registerItem("paintbrush_cyan", setting -> new PaintBrushItem(setting.maxDamage(32),
+            DyeBlockMappings.generateColorMapping(DyeColor.CYAN)));
+    public static final Item PAINTBRUSH_GRAY = registerItem("paintbrush_gray", setting -> new PaintBrushItem(setting.maxDamage(32),
+            DyeBlockMappings.generateColorMapping(DyeColor.GRAY)));
+    public static final Item PAINTBRUSH_GREEN = registerItem("paintbrush_green", setting -> new PaintBrushItem(setting.maxDamage(32),
+            DyeBlockMappings.generateColorMapping(DyeColor.GREEN)));
+    public static final Item PAINTBRUSH_LIGHT_BLUE = registerItem("paintbrush_light_blue", setting -> new PaintBrushItem(setting.maxDamage(32),
+            DyeBlockMappings.generateColorMapping(DyeColor.LIGHT_BLUE)));
+    public static final Item PAINTBRUSH_LIGHT_GRAY = registerItem("paintbrush_light_gray", setting -> new PaintBrushItem(setting.maxDamage(32),
+            DyeBlockMappings.generateColorMapping(DyeColor.LIGHT_GRAY)));
+    public static final Item PAINTBRUSH_LIME = registerItem("paintbrush_lime", setting -> new PaintBrushItem(setting.maxDamage(32),
+            DyeBlockMappings.generateColorMapping(DyeColor.LIME)));
+    public static final Item PAINTBRUSH_MAGENTA = registerItem("paintbrush_magenta", setting -> new PaintBrushItem(setting.maxDamage(32),
+            DyeBlockMappings.generateColorMapping(DyeColor.MAGENTA)));
+    public static final Item PAINTBRUSH_ORANGE = registerItem("paintbrush_orange", setting -> new PaintBrushItem(setting.maxDamage(32),
+            DyeBlockMappings.generateColorMapping(DyeColor.ORANGE)));
+    public static final Item PAINTBRUSH_PINK = registerItem("paintbrush_pink", setting -> new PaintBrushItem(setting.maxDamage(32),
+            DyeBlockMappings.generateColorMapping(DyeColor.PINK)));
+    public static final Item PAINTBRUSH_PURPLE = registerItem("paintbrush_purple", setting -> new PaintBrushItem(setting.maxDamage(32),
+            DyeBlockMappings.generateColorMapping(DyeColor.PURPLE)));
+    public static final Item PAINTBRUSH_RED = registerItem("paintbrush_red", setting -> new PaintBrushItem(setting.maxDamage(32),
+            DyeBlockMappings.generateColorMapping(DyeColor.RED)));
+    public static final Item PAINTBRUSH_WHITE = registerItem("paintbrush_white", setting -> new PaintBrushItem(setting.maxDamage(32),
+            DyeBlockMappings.generateColorMapping(DyeColor.WHITE)));
+    public static final Item PAINTBRUSH_YELLOW = registerItem("paintbrush_yellow", setting -> new PaintBrushItem(setting.maxDamage(32),
+            DyeBlockMappings.generateColorMapping(DyeColor.YELLOW)));
+
 
     //armors
     public static final Item YELLOW_HAT = registerItem("yellow_hat",

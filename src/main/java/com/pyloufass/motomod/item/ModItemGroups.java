@@ -70,7 +70,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.GRAY_CRYSTALLIUM_BLOCK);
                         entries.add(ModBlocks.GREEN_CRYSTALLIUM_BLOCK);
                         entries.add(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.LIGHT_GREY_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.LIGHT_GRAY_CRYSTALLIUM_BLOCK);
                         entries.add(ModBlocks.LIME_CRYSTALLIUM_BLOCK);
                         entries.add(ModBlocks.MAGENTA_CRYSTALLIUM_BLOCK);
                         entries.add(ModBlocks.ORANGE_CRYSTALLIUM_BLOCK);

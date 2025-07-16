@@ -38,7 +38,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GRAY_CRYSTALLIUM_BLOCK);
         addDrop(ModBlocks.GREEN_CRYSTALLIUM_BLOCK);
         addDrop(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_BLOCK);
-        addDrop(ModBlocks.LIGHT_GREY_CRYSTALLIUM_BLOCK);
+        addDrop(ModBlocks.LIGHT_GRAY_CRYSTALLIUM_BLOCK);
         addDrop(ModBlocks.LIME_CRYSTALLIUM_BLOCK);
         addDrop(ModBlocks.MAGENTA_CRYSTALLIUM_BLOCK);
         addDrop(ModBlocks.ORANGE_CRYSTALLIUM_BLOCK);
