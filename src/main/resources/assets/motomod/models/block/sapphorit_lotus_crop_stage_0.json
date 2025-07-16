@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/crop",
   "textures": {
-    "crop": "motomod:block/medium_sapphorit_lotus"
+    "crop": "motomod:block/sapphorit_lotus_crop_stage_0"
   }
 }

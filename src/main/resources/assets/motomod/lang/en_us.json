@@ -2,6 +2,8 @@
   "item.motomod.sapphorit_shard": "Sapphorit Shard",
   "item.motomod.sapphorit_seed": "Sapphorit Seed",
   "item.motomod.sapphorit_carrot": "Sapphorit Carrot",
+  "item.motomod.sapphorit_lotus": "Sapphorit Lotus",
+
   "item.motomod.paintbrush_black": "Black Paintbrush",
   "item.motomod.paintbrush_blue": "Blue Paintbrush",
   "item.motomod.paintbrush_brown": "Brown Paintbrush",
@@ -25,7 +27,6 @@
   "effect.motomod.colorfull": "You're colorfull!",
 
   "block.motomod.sapphorit_block": "Sapphorit",
-  "block.motomod.sapphorit_lotus": "Sapphorit Lotus",
   "block.motomod.sapphorit_crystallium_block": "Sapphorit Cristallium",
   "block.motomod.black_crystallium_block": "Black Cristallium",
   "block.motomod.blue_crystallium_block": "Blue Cristallium",

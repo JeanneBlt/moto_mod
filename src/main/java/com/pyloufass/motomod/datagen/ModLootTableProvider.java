@@ -1,5 +1,6 @@
 package com.pyloufass.motomod.datagen;
 
+import com.pyloufass.motomod.block.custom.LotusCropBlock;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import com.pyloufass.motomod.block.ModBlocks;
@@ -48,6 +49,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WHITE_CRYSTALLIUM_BLOCK);
         addDrop(ModBlocks.YELLOW_CRYSTALLIUM_BLOCK);
         addDrop(ModBlocks.SAPPHORIT_BLOCK);
+
+        BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.SAPPHORIT_LOTUS_CROP)
+                .properties(StatePredicate.Builder.create().exactMatch(LotusCropBlock.AGE, LotusCropBlock.MAX_AGE));
+        this.addDrop(ModBlocks.SAPPHORIT_LOTUS_CROP, this.cropDrops(ModBlocks.SAPPHORIT_LOTUS_CROP, ModItems.SAPPHORIT_LOTUS, ModItems.SAPPHORIT_SEED, builder2));
 
     }
 

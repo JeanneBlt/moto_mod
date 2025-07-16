@@ -1,6 +1,7 @@
 package com.pyloufass.motomod.block;
 
 import com.pyloufass.motomod.MotoMod;
+import com.pyloufass.motomod.block.custom.LotusCropBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
@@ -26,15 +27,10 @@ public class ModBlocks {
             properties -> new Block(properties.strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
 
-    public static final Block SAPPHORIT_LOTUS = registerBlock("sapphorit_lotus",
-            properties -> new Block(properties.strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
-    public static final Block MEDIUM_SAPPHORIT_LOTUS = registerBlock("medium_sapphorit_lotus",
-            properties -> new Block(properties.strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
-    public static final Block SMALL_SAPPHORIT_LOTUS = registerBlock("small_sapphorit_lotus",
-            properties -> new Block(properties.strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block SAPPHORIT_LOTUS_CROP = registerBlockWithoutBlockItem("sapphorit_lotus_crop",
+            properties -> new LotusCropBlock(properties.noCollision()
+                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)
+                    .pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block SAPPHORIT_CRYSTALLIUM_BLOCK = registerBlock("sapphorit_crystallium_block",
             properties -> new Block(properties.strength(4f)

@@ -2,6 +2,9 @@ package com.pyloufass.motomod.datagen;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import com.pyloufass.motomod.block.ModBlocks;
+import com.pyloufass.motomod.block.custom.LotusCropBlock;
+import com.pyloufass.motomod.component.ModDataComponentTypes;
 import com.pyloufass.motomod.item.ModArmorMaterials;
 import com.pyloufass.motomod.item.ModItems;
 import net.minecraft.client.data.*;
@@ -23,10 +26,11 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-
+//        blockStateModelGenerator.registerCrop(ModBlocks.SAPPHORIT_LOTUS_CROP, LotusCropBlock.AGE, 0, 1, 2, 3);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+//        itemModelGenerator.register(ModItems.SAPPHORIT_LOTUS, Models.GENERATED);
     }
 }
