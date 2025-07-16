@@ -1,16 +1,14 @@
 package com.pyloufass.motomod.item.custom.paintbrush;
 
+import net.minecraft.block.*;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtOps;
-import net.minecraft.registry.RegistryOps;
-import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.*;
 import net.minecraft.state.property.Property;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import com.pyloufass.motomod.component.ModDataComponentTypes;
 import com.pyloufass.motomod.item.custom.paintbrush.PublicShulkerBoxBlockEntity;
-import net.minecraft.block.BedBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.ShulkerBoxBlock;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.entity.ShulkerBoxBlockEntity;
 import net.minecraft.block.enums.BedPart;
@@ -26,6 +24,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.world.biome.Biome;
 
 import java.util.Map;
 
@@ -75,55 +74,33 @@ public class PaintBrushItem extends Item {
 
             world.setBlockState(footPos, footState, Block.NOTIFY_ALL);
             world.setBlockState(headPos, headState, Block.NOTIFY_ALL);
-
         // normal case
         } else {
-            BlockEntity oldBlockEntity = world.getBlockEntity(pos);
-            NbtCompound blockEntityNbt = null;
+            RegistryWrapper.WrapperLookup registries = world.getRegistryManager();
+            BlockEntity oldEntity = world.getBlockEntity(pos);
+            NbtCompound savedNbt = null;
 
-            if (oldBlockEntity instanceof ShulkerBoxBlockEntity shulkerBox) {
-                blockEntityNbt = new NbtCompound();
-
-                RegistryWrapper.WrapperLookup registryLookup =
-                        (RegistryWrapper.WrapperLookup) ((ServerWorld) world).getRegistryManager();
-
-                PublicShulkerBoxBlockEntity publicWrapper =
-                        new PublicShulkerBoxBlockEntity(pos, oldState);
-
-                publicWrapper.readNbt(shulkerBox.createNbt(registryLookup), registryLookup);
-                publicWrapper.writeNbt(blockEntityNbt, registryLookup);
-                blockEntityNbt.remove("id");
+            if (oldEntity instanceof ShulkerBoxBlockEntity) {
+                savedNbt = oldEntity.createNbtWithId(registries);
             }
 
-            if (blockEntityNbt != null) {
-                BlockEntity newBlockEntity = world.getBlockEntity(pos);
-                if (newBlockEntity instanceof ShulkerBoxBlockEntity newShulker) {
-                    RegistryWrapper.WrapperLookup registryWrapper =
-                            (RegistryWrapper.WrapperLookup) ((ServerWorld) world).getRegistryManager();
-
-                    PublicShulkerBoxBlockEntity publicWrapper =
-                            new PublicShulkerBoxBlockEntity(pos, newState);
-
-                    publicWrapper.readNbt(blockEntityNbt, registryWrapper);
-
-                    NbtCompound nbtToApply = publicWrapper.createNbt(registryWrapper);
-
-                    world.removeBlockEntity(pos);
-
-                    var finalNbt = new NbtCompound();
-                    finalNbt.putString("id", BlockEntityType.getId(newShulker.getType()).toString());
-                    finalNbt.putInt("x", pos.getX());
-                    finalNbt.putInt("y", pos.getY());
-                    finalNbt.putInt("z", pos.getZ());
-                    finalNbt.copyFrom(nbtToApply);
-
-                    BlockEntity recreated = BlockEntity.createFromNbt(pos, newState, finalNbt, registryWrapper);
-                    if (recreated != null) {
-                        world.addBlockEntity(recreated);
-                    }
+            for (Property<?> property : oldState.getProperties()) {
+                if (newState.contains(property)) {
+                    newState = copyProperty(oldState, newState, property);
                 }
             }
 
+            world.setBlockState(pos, newState, Block.NOTIFY_ALL);
+
+            if (savedNbt != null) {
+                Identifier id = Registries.BLOCK_ENTITY_TYPE.getId(BlockEntityType.SHULKER_BOX);
+                if (id != null) savedNbt.putString("id", id.toString());
+
+                BlockEntity newEntity = world.getBlockEntity(pos);
+                if (newEntity != null) {
+                    newEntity.read(savedNbt, registries);
+                }
+            }
             for (var property : oldState.getProperties()) {
                 if (newState.contains(property)) {
                     newState = copyProperty(oldState, newState, property);
