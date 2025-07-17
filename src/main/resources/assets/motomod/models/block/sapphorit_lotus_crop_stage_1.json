@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/crop",
+  "parent": "minecraft:block/cross",
   "textures": {
-    "crop": "motomod:block/sapphorit_lotus_crop_stage_1"
+    "cross": "motomod:block/sapphorit_lotus_crop_stage_1"
   }
 }

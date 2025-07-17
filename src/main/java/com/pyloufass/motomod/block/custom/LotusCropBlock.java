@@ -1,7 +1,9 @@
 package com.pyloufass.motomod.block.custom;
 
 import com.mojang.serialization.MapCodec;
+import com.pyloufass.motomod.block.ModBlocks;
 import com.pyloufass.motomod.item.ModItems;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
@@ -12,6 +14,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import net.minecraft.block.*;
 
@@ -21,24 +24,24 @@ public class LotusCropBlock extends PlantBlock {
     public static final IntProperty AGE = Properties.AGE_3;
     private static final VoxelShape[] SHAPES_BY_AGE = Block.createShapeArray(3, age -> Block.createColumnShape(16.0, 0.0, 5 + age * 3));
 
+    @Override
+    public MapCodec<LotusCropBlock> getCodec() {
+        return CODEC;
+    }
+
     public LotusCropBlock(AbstractBlock.Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(AGE, 0));
     }
 
     @Override
-    public MapCodec<LotusCropBlock> getCodec() {
-        return CODEC;
+    protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return SHAPES_BY_AGE[state.get(AGE)];
     }
-
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
         return floor.isOf(Blocks.SOUL_SAND);
-    }
-    @Override
-    protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return SHAPES_BY_AGE[state.get(AGE)];
     }
 
     @Override
@@ -56,13 +59,8 @@ public class LotusCropBlock extends PlantBlock {
     }
 
     @Override
-    protected ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state, boolean includeData) {
-        return new ItemStack(ModItems.SAPPHORIT_LOTUS);
-    }
-
-    @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(AGE);
     }
-}
 
+}
