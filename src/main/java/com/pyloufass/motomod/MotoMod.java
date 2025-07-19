@@ -1,6 +1,7 @@
 package com.pyloufass.motomod;
 
 import com.pyloufass.motomod.block.ModBlocks;
+import com.pyloufass.motomod.block.entity.ModBlockEntities;
 import com.pyloufass.motomod.component.ModDataComponentTypes;
 import com.pyloufass.motomod.item.ModItems;
 import com.pyloufass.motomod.status.ModStatus;
@@ -20,6 +21,7 @@ public class MotoMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 
 		ModBlocks.registerModBlocks();
+		ModBlockEntities.registerBlockEntities();
 		ModItems.registerModItems();
 
 		ModDataComponentTypes.registerDataComponentTypes();

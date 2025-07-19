@@ -56,6 +56,7 @@ public class ModItemGroups {
 
                         //blocks
                         entries.add(ModBlocks.SAPPHORIT_BLOCK);
+                        entries.add(ModBlocks.SUSPICIOUS_SOUL_SAND);
 
                         //crystallium blocks
                         entries.add(ModBlocks.SAPPHORIT_CRYSTALLIUM_BLOCK);

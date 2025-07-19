@@ -2,6 +2,7 @@ package com.pyloufass.motomod.block;
 
 import com.pyloufass.motomod.MotoMod;
 import com.pyloufass.motomod.block.custom.LotusCropBlock;
+import com.pyloufass.motomod.block.custom.SuspiciousSoulSand;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
@@ -18,7 +19,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
-
+import net.minecraft.sound.SoundEvents;
 import java.util.function.Function;
 
 public class ModBlocks {
@@ -83,6 +84,16 @@ public class ModBlocks {
     public static final Block YELLOW_CRYSTALLIUM_BLOCK = registerBlock("yellow_crystallium_block",
             properties -> new Block(properties.strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+
+    public static final Block SUSPICIOUS_SOUL_SAND = registerBlock("suspicious_soul_sand",
+            properties -> new SuspiciousSoulSand(
+                    Blocks.SOUL_SAND,
+                    SoundEvents.ITEM_BRUSH_BRUSHING_SAND,
+                    SoundEvents.ITEM_BRUSH_BRUSHING_SAND_COMPLETE,
+                    properties.strength(4f).requiresTool().sounds(BlockSoundGroup.SOUL_SAND)
+            )
+    );
+
 
     public static Block getCrystalliumBlock(DyeColor color) {
         return switch (color) {

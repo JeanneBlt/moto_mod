@@ -12,14 +12,17 @@ import net.minecraft.item.Item;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
+import net.minecraft.loot.condition.LootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.state.property.Properties;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -50,10 +53,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.YELLOW_CRYSTALLIUM_BLOCK);
         addDrop(ModBlocks.SAPPHORIT_BLOCK);
 
-        BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.SAPPHORIT_LOTUS_CROP)
-                .properties(StatePredicate.Builder.create().exactMatch(LotusCropBlock.AGE, LotusCropBlock.MAX_AGE));
-        this.addDrop(ModBlocks.SAPPHORIT_LOTUS_CROP, this.cropDrops(ModBlocks.SAPPHORIT_LOTUS_CROP, ModItems.SAPPHORIT_LOTUS, ModItems.SAPPHORIT_SEED, builder2));
-
+        this.addDrop(ModBlocks.SAPPHORIT_LOTUS_CROP, sapphoritLotusCropLoot());
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
@@ -61,5 +61,53 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
                 ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
                 .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
+    }
+
+
+
+    public LootTable.Builder sapphoritLotusCropLoot()
+    {
+        LootTable.Builder lotusLootTable = LootTable.builder();
+
+        lotusLootTable.pool(LootPool.builder()
+                .conditionally(BlockStatePropertyLootCondition.builder(ModBlocks.SAPPHORIT_LOTUS_CROP)
+                        .properties(StatePredicate.Builder.create().exactMatch(LotusCropBlock.AGE, 0)))
+                .rolls(ConstantLootNumberProvider.create(1))
+                .with(ItemEntry.builder(ModItems.SAPPHORIT_SEED))
+        );
+
+        lotusLootTable.pool(LootPool.builder()
+                .conditionally(BlockStatePropertyLootCondition.builder(ModBlocks.SAPPHORIT_LOTUS_CROP)
+                        .properties(StatePredicate.Builder.create().exactMatch(LotusCropBlock.AGE, 1)))
+                .rolls(ConstantLootNumberProvider.create(1))
+                .with(ItemEntry.builder(ModItems.SAPPHORIT_SHARD)
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 3.0f))))
+        );
+        lotusLootTable.pool(LootPool.builder()
+                .conditionally(BlockStatePropertyLootCondition.builder(ModBlocks.SAPPHORIT_LOTUS_CROP)
+                        .properties(StatePredicate.Builder.create().exactMatch(LotusCropBlock.AGE, 2)))
+                .rolls(ConstantLootNumberProvider.create(1))
+                .with(ItemEntry.builder(ModItems.SAPPHORIT_SHARD)
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(3.0f, 6.0f))))
+        );
+
+        lotusLootTable.pool(LootPool.builder()
+                .conditionally(BlockStatePropertyLootCondition.builder(ModBlocks.SAPPHORIT_LOTUS_CROP)
+                        .properties(StatePredicate.Builder.create().exactMatch(LotusCropBlock.AGE, 3)))
+                .conditionally(this.createSilkTouchCondition())
+                .rolls(ConstantLootNumberProvider.create(1))
+                .with(ItemEntry.builder(ModItems.SAPPHORIT_LOTUS))
+        );
+
+        lotusLootTable.pool(LootPool.builder()
+                .conditionally(BlockStatePropertyLootCondition.builder(ModBlocks.SAPPHORIT_LOTUS_CROP)
+                        .properties(StatePredicate.Builder.create().exactMatch(LotusCropBlock.AGE, 3)))
+                .conditionally(this.createWithoutSilkTouchCondition())
+                .rolls(ConstantLootNumberProvider.create(1))
+                .with(ItemEntry.builder(ModItems.SAPPHORIT_SHARD)
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(6.0f, 10.0f))))
+        );
+
+        return lotusLootTable;
     }
 }
