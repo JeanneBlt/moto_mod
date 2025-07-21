@@ -1,6 +1,6 @@
 {
   "model": {
     "type" : "minecraft:model",
-    "model": "motomod:item/sapphorit_lotus"
+    "model": "motomod:block/sapphorit_lotus"
   }
 }

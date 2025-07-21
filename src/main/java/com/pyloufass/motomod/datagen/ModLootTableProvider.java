@@ -12,6 +12,7 @@ import net.minecraft.item.Item;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
+import net.minecraft.loot.condition.InvertedLootCondition;
 import net.minecraft.loot.condition.LootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
@@ -20,6 +21,8 @@ import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
+import net.minecraft.predicate.item.EnchantmentPredicate;
+import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.state.property.Properties;
@@ -52,6 +55,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WHITE_CRYSTALLIUM_BLOCK);
         addDrop(ModBlocks.YELLOW_CRYSTALLIUM_BLOCK);
         addDrop(ModBlocks.SAPPHORIT_BLOCK);
+
+        addDrop(ModBlocks.SAPPHORIT_LOTUS, sapphoritLotusLoot());
 
         this.addDrop(ModBlocks.SAPPHORIT_LOTUS_CROP, sapphoritLotusCropLoot());
     }
@@ -96,7 +101,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                         .properties(StatePredicate.Builder.create().exactMatch(LotusCropBlock.AGE, 3)))
                 .conditionally(this.createSilkTouchCondition())
                 .rolls(ConstantLootNumberProvider.create(1))
-                .with(ItemEntry.builder(ModItems.SAPPHORIT_LOTUS))
+                .with(ItemEntry.builder(ModBlocks.SAPPHORIT_LOTUS))
         );
 
         lotusLootTable.pool(LootPool.builder()
@@ -110,4 +115,27 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         return lotusLootTable;
     }
+
+    public LootTable.Builder sapphoritLotusLoot()
+    {
+        LootTable.Builder lotusLootTable = LootTable.builder();
+
+        // Drop du bloc si Silk Touch
+        lotusLootTable.pool(LootPool.builder()
+                .conditionally(createSilkTouchCondition())
+                .rolls(ConstantLootNumberProvider.create(1))
+                .with(ItemEntry.builder(ModBlocks.SAPPHORIT_LOTUS)));
+
+        // Drop de shards si pas Silk Touch
+        lotusLootTable.pool(LootPool.builder()
+                .conditionally(createWithoutSilkTouchCondition())
+                .rolls(ConstantLootNumberProvider.create(1))
+                .with(ItemEntry.builder(ModItems.SAPPHORIT_SHARD)
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(6.0f, 10.0f))))
+        );
+
+        return lotusLootTable;
+    }
+
+
 }

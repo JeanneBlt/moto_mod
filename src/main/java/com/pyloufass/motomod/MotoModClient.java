@@ -13,6 +13,7 @@ public class MotoModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.SAPPHORIT_LOTUS_CROP);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.SAPPHORIT_LOTUS);
         BlockEntityRendererFactories.register(ModBlockEntities.SUSPICIOUS_SOUL_SAND_ENTITY, SuspiciousSoulSandEntityRenderer::new);
     }
 }

@@ -1,6 +1,7 @@
 package com.pyloufass.motomod.block.entity.custom;
 
 import com.mojang.logging.LogUtils;
+import com.pyloufass.motomod.block.custom.SuspiciousSoulSand;
 import com.pyloufass.motomod.block.entity.ModBlockEntities;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.advancement.criterion.Criteria;
@@ -122,7 +123,7 @@ public class SuspiciousSoulSandEntity extends BlockEntity {
         BlockState blockState = this.getCachedState();
         world.syncWorldEvent(WorldEvents.BLOCK_FINISHED_BRUSHING, this.getPos(), Block.getRawIdFromState(blockState));
         Block block2;
-        if (this.getCachedState().getBlock() instanceof BrushableBlock brushableBlock) {
+        if (this.getCachedState().getBlock() instanceof SuspiciousSoulSand brushableBlock) {
             block2 = brushableBlock.getBaseBlock();
         } else {
             block2 = Blocks.AIR;

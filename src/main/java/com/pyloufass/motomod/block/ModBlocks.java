@@ -3,10 +3,13 @@ package com.pyloufass.motomod.block;
 import com.pyloufass.motomod.MotoMod;
 import com.pyloufass.motomod.block.custom.LotusCropBlock;
 import com.pyloufass.motomod.block.custom.SuspiciousSoulSand;
+import com.pyloufass.motomod.status.ModStatus;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.component.type.SuspiciousStewEffectsComponent;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -30,6 +33,10 @@ public class ModBlocks {
 
     public static final Block SAPPHORIT_LOTUS_CROP = registerBlockWithoutBlockItem("sapphorit_lotus_crop",
             properties -> new LotusCropBlock(properties.noCollision()
+                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)
+                    .pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block SAPPHORIT_LOTUS = registerBlock("sapphorit_lotus",
+            properties -> new CactusFlowerBlock(properties.noCollision()
                     .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)
                     .pistonBehavior(PistonBehavior.DESTROY)));
 
@@ -90,7 +97,7 @@ public class ModBlocks {
                     Blocks.SOUL_SAND,
                     SoundEvents.ITEM_BRUSH_BRUSHING_SAND,
                     SoundEvents.ITEM_BRUSH_BRUSHING_SAND_COMPLETE,
-                    properties.strength(4f).requiresTool().sounds(BlockSoundGroup.SOUL_SAND)
+                    properties.strength(4f).sounds(BlockSoundGroup.SOUL_SAND)
             )
     );
 

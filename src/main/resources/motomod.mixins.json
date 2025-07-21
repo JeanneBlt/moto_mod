@@ -1,11 +1,12 @@
 {
-	"required": true,
-	"package": "com.pyloufass.motomod.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ExampleMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "com.pyloufass.motomod.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BrushItemMixin",
+    "ExampleMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

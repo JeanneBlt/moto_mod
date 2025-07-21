@@ -26,7 +26,6 @@ public class ModItemGroups {
                         entries.add(ModItems.SAPPHORIT_SHARD);
                         entries.add(ModItems.SAPPHORIT_CARROT);
                         entries.add(ModItems.SAPPHORIT_SEED);
-                        entries.add(ModItems.SAPPHORIT_LOTUS);
 
                         //paintbrushes
                         entries.add(ModItems.PAINTBRUSH_BLACK);
@@ -57,6 +56,7 @@ public class ModItemGroups {
                         //blocks
                         entries.add(ModBlocks.SAPPHORIT_BLOCK);
                         entries.add(ModBlocks.SUSPICIOUS_SOUL_SAND);
+                        entries.add(ModBlocks.SAPPHORIT_LOTUS);
 
                         //crystallium blocks
                         entries.add(ModBlocks.SAPPHORIT_CRYSTALLIUM_BLOCK);

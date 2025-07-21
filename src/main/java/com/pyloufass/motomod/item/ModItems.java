@@ -21,7 +21,6 @@ public class ModItems {
 
     //items
     public static final Item SAPPHORIT_SHARD = registerItem("sapphorit_shard", Item::new);
-    public static final Item SAPPHORIT_LOTUS = registerItem("sapphorit_lotus", Item::new);
     public static final Item SAPPHORIT_CARROT = registerItem("sapphorit_carrot", Item::new);
 
     public static final Item SAPPHORIT_SEED = registerItem("sapphorit_seed",
