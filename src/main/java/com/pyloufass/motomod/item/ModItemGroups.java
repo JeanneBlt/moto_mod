@@ -27,6 +27,11 @@ public class ModItemGroups {
                         entries.add(ModItems.SAPPHORIT_CARROT);
                         entries.add(ModItems.SAPPHORIT_SEED);
 
+                        entries.add(ModItems.DRIVE_POTTERY_SHARD);
+                        entries.add(ModItems.SAPPHORIT_KEY);
+                        entries.add(ModItems.PADMA_POTTERY_SHARD);
+                        entries.add(ModItems.SUNSET_ARMOR_TRIM_SMITHING_TEMPLATE);
+
                         //paintbrushes
                         entries.add(ModItems.PAINTBRUSH_BLACK);
                         entries.add(ModItems.PAINTBRUSH_BLUE);

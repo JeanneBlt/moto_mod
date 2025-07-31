@@ -23,6 +23,11 @@ public class ModItems {
     public static final Item SAPPHORIT_SHARD = registerItem("sapphorit_shard", Item::new);
     public static final Item SAPPHORIT_CARROT = registerItem("sapphorit_carrot", Item::new);
 
+    public static final Item DRIVE_POTTERY_SHARD = registerItem("drive_pottery_shard", Item::new);
+    public static final Item SAPPHORIT_KEY = registerItem("sapphorit_key", Item::new);
+    public static final Item PADMA_POTTERY_SHARD = registerItem("padma_pottery_shard", Item::new);
+    public static final Item SUNSET_ARMOR_TRIM_SMITHING_TEMPLATE = registerItem("sunset_armor_trim_smithing_template", Item::new);
+
     public static final Item SAPPHORIT_SEED = registerItem("sapphorit_seed",
             setting -> new BlockItem(ModBlocks.SAPPHORIT_LOTUS_CROP, setting));
 
