@@ -2,10 +2,15 @@ package com.pyloufass.motomod;
 
 import com.pyloufass.motomod.datagen.ModBlockTagProvider;
 import com.pyloufass.motomod.datagen.ModItemTagProvider;
+import com.pyloufass.motomod.datagen.ModRecipeProvider;
 import com.pyloufass.motomod.datagen.ModLootTableProvider;
+import com.pyloufass.motomod.trim.ModTrimMaterials;
+import com.pyloufass.motomod.trim.ModTrimPatterns;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import com.pyloufass.motomod.datagen.ModModelProvider;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
 
 public class MotoModDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -15,5 +20,12 @@ public class MotoModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModItemTagProvider::new);
 		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModBlockTagProvider::new);
+		pack.addProvider(ModRecipeProvider::new);
+	}
+
+	@Override
+	public void buildRegistry(RegistryBuilder registryBuilder) {
+		registryBuilder.addRegistry(RegistryKeys.TRIM_MATERIAL, ModTrimMaterials::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.TRIM_PATTERN, ModTrimPatterns::bootstrap);
 	}
 }
