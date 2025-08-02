@@ -37,6 +37,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
 
+        addDrop(ModBlocks.SAPPHORIT_BLOCK);
+
         addDrop(ModBlocks.SAPPHORIT_CRYSTALLIUM_BLOCK);
         addDrop(ModBlocks.BLACK_CRYSTALLIUM_BLOCK);
         addDrop(ModBlocks.BLUE_CRYSTALLIUM_BLOCK);
@@ -54,7 +56,42 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RED_CRYSTALLIUM_BLOCK);
         addDrop(ModBlocks.WHITE_CRYSTALLIUM_BLOCK);
         addDrop(ModBlocks.YELLOW_CRYSTALLIUM_BLOCK);
-        addDrop(ModBlocks.SAPPHORIT_BLOCK);
+
+        addDrop(ModBlocks.SAPPHORIT_CRYSTALLIUM_CUT_STAIRS);
+        addDrop(ModBlocks.BLACK_CRYSTALLIUM_CUT_STAIRS);
+        addDrop(ModBlocks.BLUE_CRYSTALLIUM_CUT_STAIRS);
+        addDrop(ModBlocks.BROWN_CRYSTALLIUM_CUT_STAIRS);
+        addDrop(ModBlocks.CYAN_CRYSTALLIUM_CUT_STAIRS);
+        addDrop(ModBlocks.GRAY_CRYSTALLIUM_CUT_STAIRS);
+        addDrop(ModBlocks.GREEN_CRYSTALLIUM_CUT_STAIRS);
+        addDrop(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_CUT_STAIRS);
+        addDrop(ModBlocks.LIGHT_GRAY_CRYSTALLIUM_CUT_STAIRS);
+        addDrop(ModBlocks.LIME_CRYSTALLIUM_CUT_STAIRS);
+        addDrop(ModBlocks.MAGENTA_CRYSTALLIUM_CUT_STAIRS);
+        addDrop(ModBlocks.ORANGE_CRYSTALLIUM_CUT_STAIRS);
+        addDrop(ModBlocks.PINK_CRYSTALLIUM_CUT_STAIRS);
+        addDrop(ModBlocks.PURPLE_CRYSTALLIUM_CUT_STAIRS);
+        addDrop(ModBlocks.RED_CRYSTALLIUM_CUT_STAIRS);
+        addDrop(ModBlocks.WHITE_CRYSTALLIUM_CUT_STAIRS);
+        addDrop(ModBlocks.YELLOW_CRYSTALLIUM_CUT_STAIRS);
+
+        addDrop(ModBlocks.SAPPHORIT_CRYSTALLIUM_CUT_SLAB);
+        addDrop(ModBlocks.BLACK_CRYSTALLIUM_CUT_SLAB);
+        addDrop(ModBlocks.BLUE_CRYSTALLIUM_CUT_SLAB);
+        addDrop(ModBlocks.BROWN_CRYSTALLIUM_CUT_SLAB);
+        addDrop(ModBlocks.CYAN_CRYSTALLIUM_CUT_SLAB);
+        addDrop(ModBlocks.GRAY_CRYSTALLIUM_CUT_SLAB);
+        addDrop(ModBlocks.GREEN_CRYSTALLIUM_CUT_SLAB);
+        addDrop(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_CUT_SLAB);
+        addDrop(ModBlocks.LIGHT_GRAY_CRYSTALLIUM_CUT_SLAB);
+        addDrop(ModBlocks.LIME_CRYSTALLIUM_CUT_SLAB);
+        addDrop(ModBlocks.MAGENTA_CRYSTALLIUM_CUT_SLAB);
+        addDrop(ModBlocks.ORANGE_CRYSTALLIUM_CUT_SLAB);
+        addDrop(ModBlocks.PINK_CRYSTALLIUM_CUT_SLAB);
+        addDrop(ModBlocks.PURPLE_CRYSTALLIUM_CUT_SLAB);
+        addDrop(ModBlocks.RED_CRYSTALLIUM_CUT_SLAB);
+        addDrop(ModBlocks.WHITE_CRYSTALLIUM_CUT_SLAB);
+        addDrop(ModBlocks.YELLOW_CRYSTALLIUM_CUT_SLAB);
 
         addDrop(ModBlocks.SAPPHORIT_LOTUS, sapphoritLotusLoot());
 
@@ -120,15 +157,13 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     {
         LootTable.Builder lotusLootTable = LootTable.builder();
 
-        // Drop du bloc si Silk Touch
         lotusLootTable.pool(LootPool.builder()
-                .conditionally(createSilkTouchCondition())
+                .conditionally(this.createSilkTouchCondition())
                 .rolls(ConstantLootNumberProvider.create(1))
                 .with(ItemEntry.builder(ModBlocks.SAPPHORIT_LOTUS)));
 
-        // Drop de shards si pas Silk Touch
         lotusLootTable.pool(LootPool.builder()
-                .conditionally(createWithoutSilkTouchCondition())
+                .conditionally(this.createWithoutSilkTouchCondition())
                 .rolls(ConstantLootNumberProvider.create(1))
                 .with(ItemEntry.builder(ModItems.SAPPHORIT_SHARD)
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(6.0f, 10.0f))))

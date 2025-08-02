@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "motomod:block/green_crystallium_cut"
+  }
+}

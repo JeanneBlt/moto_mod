@@ -33,11 +33,11 @@ public class ModBlocks {
 
     public static final Block SAPPHORIT_LOTUS_CROP = registerBlockWithoutBlockItem("sapphorit_lotus_crop",
             properties -> new LotusCropBlock(properties.noCollision()
-                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)
+                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.AMETHYST_CLUSTER)
                     .pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block SAPPHORIT_LOTUS = registerBlock("sapphorit_lotus",
             properties -> new CactusFlowerBlock(properties.noCollision()
-                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)
+                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.AMETHYST_CLUSTER)
                     .pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block SAPPHORIT_CRYSTALLIUM_BLOCK = registerBlock("sapphorit_crystallium_block",
@@ -92,6 +92,145 @@ public class ModBlocks {
             properties -> new Block(properties.strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
 
+    public static final Block SAPPHORIT_CRYSTALLIUM_CUT = registerBlock("sapphorit_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block BLACK_CRYSTALLIUM_CUT = registerBlock("black_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block BLUE_CRYSTALLIUM_CUT = registerBlock("blue_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block BROWN_CRYSTALLIUM_CUT = registerBlock("brown_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block CYAN_CRYSTALLIUM_CUT = registerBlock("cyan_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block GRAY_CRYSTALLIUM_CUT = registerBlock("gray_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block GREEN_CRYSTALLIUM_CUT = registerBlock("green_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block LIGHT_BLUE_CRYSTALLIUM_CUT = registerBlock("light_blue_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block LIGHT_GRAY_CRYSTALLIUM_CUT = registerBlock("light_gray_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block LIME_CRYSTALLIUM_CUT = registerBlock("lime_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block MAGENTA_CRYSTALLIUM_CUT = registerBlock("magenta_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block ORANGE_CRYSTALLIUM_CUT = registerBlock("orange_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block PINK_CRYSTALLIUM_CUT = registerBlock("pink_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block PURPLE_CRYSTALLIUM_CUT = registerBlock("purple_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block RED_CRYSTALLIUM_CUT = registerBlock("red_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block WHITE_CRYSTALLIUM_CUT = registerBlock("white_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+    public static final Block YELLOW_CRYSTALLIUM_CUT = registerBlock("yellow_crystallium_cut",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+
+    public static final Block SAPPHORIT_CRYSTALLIUM_CUT_STAIRS = registerBlock("sapphorit_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+    public static final Block BLACK_CRYSTALLIUM_CUT_STAIRS = registerBlock("black_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+    public static final Block BLUE_CRYSTALLIUM_CUT_STAIRS = registerBlock("blue_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+    public static final Block BROWN_CRYSTALLIUM_CUT_STAIRS = registerBlock("brown_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+    public static final Block CYAN_CRYSTALLIUM_CUT_STAIRS = registerBlock("cyan_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+    public static final Block GRAY_CRYSTALLIUM_CUT_STAIRS = registerBlock("gray_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+    public static final Block GREEN_CRYSTALLIUM_CUT_STAIRS = registerBlock("green_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+    public static final Block LIGHT_BLUE_CRYSTALLIUM_CUT_STAIRS = registerBlock("light_blue_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+    public static final Block LIGHT_GRAY_CRYSTALLIUM_CUT_STAIRS = registerBlock("light_gray_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+    public static final Block LIME_CRYSTALLIUM_CUT_STAIRS = registerBlock("lime_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+    public static final Block MAGENTA_CRYSTALLIUM_CUT_STAIRS = registerBlock("magenta_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+    public static final Block ORANGE_CRYSTALLIUM_CUT_STAIRS = registerBlock("orange_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+    public static final Block PINK_CRYSTALLIUM_CUT_STAIRS = registerBlock("pink_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+    public static final Block PURPLE_CRYSTALLIUM_CUT_STAIRS = registerBlock("purple_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+    public static final Block RED_CRYSTALLIUM_CUT_STAIRS = registerBlock("red_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+    public static final Block WHITE_CRYSTALLIUM_CUT_STAIRS = registerBlock("white_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+    public static final Block YELLOW_CRYSTALLIUM_CUT_STAIRS = registerBlock("yellow_crystallium_cut_stairs",
+            properties -> new StairsBlock(ModBlocks.SAPPHORIT_BLOCK.getDefaultState(),
+                    properties.strength(2f).requiresTool()));
+
+    public static final Block SAPPHORIT_CRYSTALLIUM_CUT_SLAB = registerBlock("sapphorit_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+    public static final Block BLACK_CRYSTALLIUM_CUT_SLAB = registerBlock("black_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+    public static final Block BLUE_CRYSTALLIUM_CUT_SLAB = registerBlock("blue_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+    public static final Block BROWN_CRYSTALLIUM_CUT_SLAB = registerBlock("brown_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+    public static final Block CYAN_CRYSTALLIUM_CUT_SLAB = registerBlock("cyan_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+    public static final Block GRAY_CRYSTALLIUM_CUT_SLAB = registerBlock("gray_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+    public static final Block GREEN_CRYSTALLIUM_CUT_SLAB = registerBlock("green_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+    public static final Block LIGHT_BLUE_CRYSTALLIUM_CUT_SLAB = registerBlock("light_blue_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+    public static final Block LIGHT_GRAY_CRYSTALLIUM_CUT_SLAB = registerBlock("light_gray_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+    public static final Block LIME_CRYSTALLIUM_CUT_SLAB = registerBlock("lime_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+    public static final Block MAGENTA_CRYSTALLIUM_CUT_SLAB = registerBlock("magenta_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+    public static final Block ORANGE_CRYSTALLIUM_CUT_SLAB = registerBlock("orange_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+    public static final Block PINK_CRYSTALLIUM_CUT_SLAB = registerBlock("pink_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+    public static final Block PURPLE_CRYSTALLIUM_CUT_SLAB = registerBlock("purple_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+    public static final Block RED_CRYSTALLIUM_CUT_SLAB = registerBlock("red_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+    public static final Block WHITE_CRYSTALLIUM_CUT_SLAB = registerBlock("white_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+    public static final Block YELLOW_CRYSTALLIUM_CUT_SLAB = registerBlock("yellow_crystallium_cut_slab",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+
     public static final Block SUSPICIOUS_SOUL_SAND = registerBlock("suspicious_soul_sand",
             properties -> new SuspiciousSoulSand(
                     Blocks.SOUL_SAND,
@@ -100,7 +239,6 @@ public class ModBlocks {
                     properties.strength(4f).sounds(BlockSoundGroup.SOUL_SAND)
             )
     );
-
 
     public static Block getCrystalliumBlock(DyeColor color) {
         return switch (color) {

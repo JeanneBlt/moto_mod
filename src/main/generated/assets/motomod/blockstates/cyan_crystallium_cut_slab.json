@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "motomod:block/cyan_crystallium_cut_slab"
+    },
+    "type=double": {
+      "model": "motomod:block/cyan_crystallium_cut"
+    },
+    "type=top": {
+      "model": "motomod:block/cyan_crystallium_cut_slab_top"
+    }
+  }
+}
