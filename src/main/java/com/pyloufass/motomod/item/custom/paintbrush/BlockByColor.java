@@ -1,4 +1,5 @@
 package com.pyloufass.motomod.item.custom.paintbrush;
+import com.pyloufass.motomod.block.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.DyeColor;
@@ -298,4 +299,87 @@ public class BlockByColor {
         };
     }
 
+    public static Block getCrystalliumBlock(DyeColor color) {
+        return switch (color) {
+            case BLACK -> ModBlocks.BLACK_CRYSTALLIUM_BLOCK;
+            case BLUE -> ModBlocks.BLUE_CRYSTALLIUM_BLOCK;
+            case BROWN -> ModBlocks.BROWN_CRYSTALLIUM_BLOCK;
+            case CYAN -> ModBlocks.CYAN_CRYSTALLIUM_BLOCK;
+            case GRAY -> ModBlocks.GRAY_CRYSTALLIUM_BLOCK;
+            case GREEN -> ModBlocks.GREEN_CRYSTALLIUM_BLOCK;
+            case LIGHT_BLUE -> ModBlocks.LIGHT_BLUE_CRYSTALLIUM_BLOCK;
+            case LIGHT_GRAY -> ModBlocks.LIGHT_GRAY_CRYSTALLIUM_BLOCK;
+            case LIME -> ModBlocks.LIME_CRYSTALLIUM_BLOCK;
+            case MAGENTA -> ModBlocks.MAGENTA_CRYSTALLIUM_BLOCK;
+            case ORANGE -> ModBlocks.ORANGE_CRYSTALLIUM_BLOCK;
+            case PINK -> ModBlocks.PINK_CRYSTALLIUM_BLOCK;
+            case PURPLE -> ModBlocks.PURPLE_CRYSTALLIUM_BLOCK;
+            case RED -> ModBlocks.RED_CRYSTALLIUM_BLOCK;
+            case WHITE -> ModBlocks.WHITE_CRYSTALLIUM_BLOCK;
+            case YELLOW -> ModBlocks.YELLOW_CRYSTALLIUM_BLOCK;
+        };
+    }
+
+    public static Block getCrystalliumCut(DyeColor color) {
+        return switch (color) {
+            case BLACK -> ModBlocks.BLACK_CRYSTALLIUM_CUT;
+            case BLUE -> ModBlocks.BLUE_CRYSTALLIUM_CUT;
+            case BROWN -> ModBlocks.BROWN_CRYSTALLIUM_CUT;
+            case CYAN -> ModBlocks.CYAN_CRYSTALLIUM_CUT;
+            case GRAY -> ModBlocks.GRAY_CRYSTALLIUM_CUT;
+            case GREEN -> ModBlocks.GREEN_CRYSTALLIUM_CUT;
+            case LIGHT_BLUE -> ModBlocks.LIGHT_BLUE_CRYSTALLIUM_CUT;
+            case LIGHT_GRAY -> ModBlocks.LIGHT_GRAY_CRYSTALLIUM_CUT;
+            case LIME -> ModBlocks.LIME_CRYSTALLIUM_CUT;
+            case MAGENTA -> ModBlocks.MAGENTA_CRYSTALLIUM_CUT;
+            case ORANGE -> ModBlocks.ORANGE_CRYSTALLIUM_CUT;
+            case PINK -> ModBlocks.PINK_CRYSTALLIUM_CUT;
+            case PURPLE -> ModBlocks.PURPLE_CRYSTALLIUM_CUT;
+            case RED -> ModBlocks.RED_CRYSTALLIUM_CUT;
+            case WHITE -> ModBlocks.WHITE_CRYSTALLIUM_CUT;
+            case YELLOW -> ModBlocks.YELLOW_CRYSTALLIUM_CUT;
+        };
+    }
+
+    public static Block getCrystalliumCutSlab(DyeColor color) {
+        return switch (color) {
+            case BLACK -> ModBlocks.BLACK_CRYSTALLIUM_CUT_SLAB;
+            case BLUE -> ModBlocks.BLUE_CRYSTALLIUM_CUT_SLAB;
+            case BROWN -> ModBlocks.BROWN_CRYSTALLIUM_CUT_SLAB;
+            case CYAN -> ModBlocks.CYAN_CRYSTALLIUM_CUT_SLAB;
+            case GRAY -> ModBlocks.GRAY_CRYSTALLIUM_CUT_SLAB;
+            case GREEN -> ModBlocks.GREEN_CRYSTALLIUM_CUT_SLAB;
+            case LIGHT_BLUE -> ModBlocks.LIGHT_BLUE_CRYSTALLIUM_CUT_SLAB;
+            case LIGHT_GRAY -> ModBlocks.LIGHT_GRAY_CRYSTALLIUM_CUT_SLAB;
+            case LIME -> ModBlocks.LIME_CRYSTALLIUM_CUT_SLAB;
+            case MAGENTA -> ModBlocks.MAGENTA_CRYSTALLIUM_CUT_SLAB;
+            case ORANGE -> ModBlocks.ORANGE_CRYSTALLIUM_CUT_SLAB;
+            case PINK -> ModBlocks.PINK_CRYSTALLIUM_CUT_SLAB;
+            case PURPLE -> ModBlocks.PURPLE_CRYSTALLIUM_CUT_SLAB;
+            case RED -> ModBlocks.RED_CRYSTALLIUM_CUT_SLAB;
+            case WHITE -> ModBlocks.WHITE_CRYSTALLIUM_CUT_SLAB;
+            case YELLOW -> ModBlocks.YELLOW_CRYSTALLIUM_CUT_SLAB;
+        };
+    }
+
+    public static Block getCrystalliumCutStairs(DyeColor color) {
+        return switch (color) {
+            case BLACK -> ModBlocks.BLACK_CRYSTALLIUM_CUT_STAIRS;
+            case BLUE -> ModBlocks.BLUE_CRYSTALLIUM_CUT_STAIRS;
+            case BROWN -> ModBlocks.BROWN_CRYSTALLIUM_CUT_STAIRS;
+            case CYAN -> ModBlocks.CYAN_CRYSTALLIUM_CUT_STAIRS;
+            case GRAY -> ModBlocks.GRAY_CRYSTALLIUM_CUT_STAIRS;
+            case GREEN -> ModBlocks.GREEN_CRYSTALLIUM_CUT_STAIRS;
+            case LIGHT_BLUE -> ModBlocks.LIGHT_BLUE_CRYSTALLIUM_CUT_STAIRS;
+            case LIGHT_GRAY -> ModBlocks.LIGHT_GRAY_CRYSTALLIUM_CUT_STAIRS;
+            case LIME -> ModBlocks.LIME_CRYSTALLIUM_CUT_STAIRS;
+            case MAGENTA -> ModBlocks.MAGENTA_CRYSTALLIUM_CUT_STAIRS;
+            case ORANGE -> ModBlocks.ORANGE_CRYSTALLIUM_CUT_STAIRS;
+            case PINK -> ModBlocks.PINK_CRYSTALLIUM_CUT_STAIRS;
+            case PURPLE -> ModBlocks.PURPLE_CRYSTALLIUM_CUT_STAIRS;
+            case RED -> ModBlocks.RED_CRYSTALLIUM_CUT_STAIRS;
+            case WHITE -> ModBlocks.WHITE_CRYSTALLIUM_CUT_STAIRS;
+            case YELLOW -> ModBlocks.YELLOW_CRYSTALLIUM_CUT_STAIRS;
+        };
+    }
 }

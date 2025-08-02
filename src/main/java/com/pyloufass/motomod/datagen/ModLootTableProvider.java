@@ -95,7 +95,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.SAPPHORIT_LOTUS, sapphoritLotusLoot());
 
-        this.addDrop(ModBlocks.SAPPHORIT_LOTUS_CROP, sapphoritLotusCropLoot());
+        addDrop(ModBlocks.SAPPHORIT_LOTUS_CROP, sapphoritLotusCropLoot());
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
@@ -104,8 +104,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                 ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
                 .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
     }
-
-
 
     public LootTable.Builder sapphoritLotusCropLoot()
     {

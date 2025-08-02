@@ -7,6 +7,7 @@ import com.pyloufass.motomod.block.custom.LotusCropBlock;
 import com.pyloufass.motomod.component.ModDataComponentTypes;
 import com.pyloufass.motomod.item.ModArmorMaterials;
 import com.pyloufass.motomod.item.ModItems;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.data.*;
 import net.minecraft.client.item.ItemAsset;
 import net.minecraft.client.render.item.model.ConditionItemModel;
@@ -14,6 +15,8 @@ import net.minecraft.client.render.item.model.ItemModel;
 import net.minecraft.client.render.item.property.bool.HasComponentProperty;
 import net.minecraft.client.render.model.json.ModelVariant;
 import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.item.Items;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.Pool;
 
@@ -27,6 +30,12 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHORIT_BLOCK);
+
+        blockStateModelGenerator.registerBrushableBlock(ModBlocks.SUSPICIOUS_SOUL_SAND);
+
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.SAPPHORIT_LOTUS_CROP, BlockStateModelGenerator.CrossType.NOT_TINTED,
+                LotusCropBlock.AGE, 0, 1, 2, 3);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.SAPPHORIT_LOTUS, BlockStateModelGenerator.CrossType.TINTED);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHORIT_CRYSTALLIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLACK_CRYSTALLIUM_BLOCK);
@@ -99,88 +108,38 @@ public class ModModelProvider extends FabricModelProvider {
         yellowCrystalliumCutPool.stairs(ModBlocks.YELLOW_CRYSTALLIUM_CUT_STAIRS);
         yellowCrystalliumCutPool.slab(ModBlocks.YELLOW_CRYSTALLIUM_CUT_SLAB);
 
-//        sapphoritPool.button(ModBlocks.SAPPHORIT_BUTTON);
-//        sapphoritPool.pressurePlate(ModBlocks.SAPPHORIT_PRESSURE_PLATE);
-//
-//        sapphoritPool.fence(ModBlocks.SAPPHORIT_FENCE);
-//        sapphoritPool.fenceGate(ModBlocks.SAPPHORIT_FENCE_GATE);
-//        sapphoritPool.wall(ModBlocks.SAPPHORIT_WALL);
-//
-//        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_PINK_GARNET_BLOCK);
-//        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_ORE);
-//        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
-//
-//        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_NETHER_ORE);
-//        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_END_ORE);
-//
-//        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAGIC_BLOCK);
-//
-//        blockStateModelGenerator.registerDoor(ModBlocks.PINK_GARNET_DOOR);
-//        blockStateModelGenerator.registerTrapdoor(ModBlocks.PINK_GARNET_TRAPDOOR);
-//
-//        Identifier lampOffIdentifier = TexturedModel.CUBE_ALL.upload(ModBlocks.PINK_GARNET_LAMP, blockStateModelGenerator.modelCollector);
-//        Identifier lampOnIdentifier = blockStateModelGenerator.createSubModel(ModBlocks.PINK_GARNET_LAMP, "_on", Models.CUBE_ALL, TextureMap::all);
-//        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(ModBlocks.PINK_GARNET_LAMP)
-//                .with(BlockStateModelGenerator.createBooleanModelMap(PinkGarnetLampBlock.CLICKED,
-//                        new WeightedVariant(Pool.<ModelVariant>builder().add(new ModelVariant(lampOnIdentifier)).build()),
-//                        new WeightedVariant(Pool.<ModelVariant>builder().add(new ModelVariant(lampOffIdentifier)).build()))));
-//
-//        blockStateModelGenerator.registerCrop(ModBlocks.CAULIFLOWER_CROP, CauliflowerCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6);
-//        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.HONEY_BERRY_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED,
-//                HoneyBerryBushBlock.AGE, 0, 1, 2, 3);
-//
-//        blockStateModelGenerator.createLogTexturePool(ModBlocks.DRIFTWOOD_LOG).log(ModBlocks.DRIFTWOOD_LOG).wood(ModBlocks.DRIFTWOOD_WOOD);
-//        blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_DRIFTWOOD_LOG).log(ModBlocks.STRIPPED_DRIFTWOOD_LOG).wood(ModBlocks.STRIPPED_DRIFTWOOD_WOOD);
-//
-//        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DRIFTWOOD_PLANKS);
-//        blockStateModelGenerator.registerSingleton(ModBlocks.DRIFTWOOD_LEAVES, TexturedModel.LEAVES);
-//        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.DRIFTWOOD_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
-//
-//        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.CHAIR);
-//
-//        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GROWTH_CHAMBER);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-//        itemModelGenerator.register(ModItems.PINK_GARNET, Models.GENERATED);
-//        itemModelGenerator.register(ModItems.RAW_PINK_GARNET, Models.GENERATED);
-//
-//        itemModelGenerator.register(ModItems.CAULIFLOWER, Models.GENERATED);
-//        // itemModelGenerator.register(ModItems.CHISEL, Models.GENERATED);
-//        itemModelGenerator.register(ModItems.STARLIGHT_ASHES, Models.GENERATED);
-//
-//        itemModelGenerator.register(ModItems.PINK_GARNET_SWORD, Models.HANDHELD);
-//        itemModelGenerator.register(ModItems.PINK_GARNET_PICKAXE, Models.HANDHELD);
-//        itemModelGenerator.register(ModItems.PINK_GARNET_SHOVEL, Models.HANDHELD);
-//        itemModelGenerator.register(ModItems.PINK_GARNET_AXE, Models.HANDHELD);
-//        itemModelGenerator.register(ModItems.PINK_GARNET_HOE, Models.HANDHELD);
-//
-//        itemModelGenerator.register(ModItems.PINK_GARNET_HAMMER, Models.HANDHELD);
-//
-//        itemModelGenerator.upload(ModItems.KAUPEN_BOW, Models.BOW);
-//        itemModelGenerator.registerBow(ModItems.KAUPEN_BOW);
-//
-//        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_HELMET, ModArmorMaterials.PINK_GARNET_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
-//        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_CHESTPLATE, ModArmorMaterials.PINK_GARNET_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
-//        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_LEGGINGS, ModArmorMaterials.PINK_GARNET_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
-//        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_BOOTS, ModArmorMaterials.PINK_GARNET_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
-//
-//        itemModelGenerator.register(ModItems.PINK_GARNET_HORSE_ARMOR, Models.GENERATED);
-//        itemModelGenerator.register(ModItems.KAUPEN_SMITHING_TEMPLATE, Models.GENERATED);
-//
-//        itemModelGenerator.register(ModItems.BAR_BRAWL_MUSIC_DISC, Models.GENERATED);
-//
-//        itemModelGenerator.register(ModBlocks.DRIFTWOOD_SAPLING.asItem(), Models.GENERATED);
-//
-//        itemModelGenerator.register(ModItems.MANTIS_SPAWN_EGG,
-//                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
-//
-//        ItemModel.Unbaked unbakedChisel = ItemModels.basic(itemModelGenerator.upload(ModItems.CHISEL, Models.GENERATED));
-//        ItemModel.Unbaked unbakedUsedChisel = ItemModels.basic(itemModelGenerator.registerSubModel(ModItems.CHISEL, "_used", Models.GENERATED));
-//        itemModelGenerator.output.accept(ModItems.CHISEL,
-//                new ItemAsset(new ConditionItemModel.Unbaked(new HasComponentProperty(ModDataComponentTypes.COORDINATES, false),
-//                        unbakedUsedChisel, unbakedChisel),
-//                        new ItemAsset.Properties(false)).model());
+
+        itemModelGenerator.register(ModItems.DRIVE_POTTERY_SHARD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PADMA_POTTERY_SHARD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SAPPHORIT_CARROT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SAPPHORIT_KEY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SAPPHORIT_SHARD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SUNSET_ARMOR_TRIM_SMITHING_TEMPLATE, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.PAINTBRUSH_BLACK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PAINTBRUSH_BLUE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PAINTBRUSH_BROWN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PAINTBRUSH_CYAN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PAINTBRUSH_GRAY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PAINTBRUSH_GREEN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PAINTBRUSH_LIGHT_BLUE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PAINTBRUSH_LIGHT_GRAY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PAINTBRUSH_LIME, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PAINTBRUSH_MAGENTA, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PAINTBRUSH_ORANGE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PAINTBRUSH_PINK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PAINTBRUSH_PURPLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PAINTBRUSH_RED, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PAINTBRUSH_WHITE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PAINTBRUSH_YELLOW, Models.GENERATED);
+
+        itemModelGenerator.registerArmor(ModItems.BIKE_HELMET, ModArmorMaterials.BIKE_HELMET_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.YELLOW_HAT, ModArmorMaterials.YELLOW_HAT_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+
+
     }
 }

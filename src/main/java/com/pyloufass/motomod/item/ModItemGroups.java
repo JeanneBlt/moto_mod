@@ -65,76 +65,90 @@ public class ModItemGroups {
 
                         //crystallium blocks
                         entries.add(ModBlocks.SAPPHORIT_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.BLACK_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.BLUE_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.BROWN_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.CYAN_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.GRAY_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.GREEN_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.LIGHT_GRAY_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.LIME_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.MAGENTA_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.ORANGE_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.PINK_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.PURPLE_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.RED_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.WHITE_CRYSTALLIUM_BLOCK);
-                        entries.add(ModBlocks.YELLOW_CRYSTALLIUM_BLOCK);
-
                         entries.add(ModBlocks.SAPPHORIT_CRYSTALLIUM_CUT);
-                        entries.add(ModBlocks.BLACK_CRYSTALLIUM_CUT);
-                        entries.add(ModBlocks.BLUE_CRYSTALLIUM_CUT);
-                        entries.add(ModBlocks.BROWN_CRYSTALLIUM_CUT);
-                        entries.add(ModBlocks.CYAN_CRYSTALLIUM_CUT);
-                        entries.add(ModBlocks.GRAY_CRYSTALLIUM_CUT);
-                        entries.add(ModBlocks.GREEN_CRYSTALLIUM_CUT);
-                        entries.add(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_CUT);
-                        entries.add(ModBlocks.LIGHT_GRAY_CRYSTALLIUM_CUT);
-                        entries.add(ModBlocks.LIME_CRYSTALLIUM_CUT);
-                        entries.add(ModBlocks.MAGENTA_CRYSTALLIUM_CUT);
-                        entries.add(ModBlocks.ORANGE_CRYSTALLIUM_CUT);
-                        entries.add(ModBlocks.PINK_CRYSTALLIUM_CUT);
-                        entries.add(ModBlocks.PURPLE_CRYSTALLIUM_CUT);
-                        entries.add(ModBlocks.RED_CRYSTALLIUM_CUT);
-                        entries.add(ModBlocks.WHITE_CRYSTALLIUM_CUT);
-                        entries.add(ModBlocks.YELLOW_CRYSTALLIUM_CUT);
-
+                        entries.add(ModBlocks.SAPPHORIT_CRYSTALLIUM_CUT_SLAB);
                         entries.add(ModBlocks.SAPPHORIT_CRYSTALLIUM_CUT_STAIRS);
-                        entries.add(ModBlocks.BLACK_CRYSTALLIUM_CUT_STAIRS);
-                        entries.add(ModBlocks.BLUE_CRYSTALLIUM_CUT_STAIRS);
-                        entries.add(ModBlocks.BROWN_CRYSTALLIUM_CUT_STAIRS);
-                        entries.add(ModBlocks.CYAN_CRYSTALLIUM_CUT_STAIRS);
-                        entries.add(ModBlocks.GRAY_CRYSTALLIUM_CUT_STAIRS);
-                        entries.add(ModBlocks.GREEN_CRYSTALLIUM_CUT_STAIRS);
-                        entries.add(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_CUT_STAIRS);
-                        entries.add(ModBlocks.LIGHT_GRAY_CRYSTALLIUM_CUT_STAIRS);
-                        entries.add(ModBlocks.LIME_CRYSTALLIUM_CUT_STAIRS);
-                        entries.add(ModBlocks.MAGENTA_CRYSTALLIUM_CUT_STAIRS);
-                        entries.add(ModBlocks.ORANGE_CRYSTALLIUM_CUT_STAIRS);
-                        entries.add(ModBlocks.PINK_CRYSTALLIUM_CUT_STAIRS);
-                        entries.add(ModBlocks.PURPLE_CRYSTALLIUM_CUT_STAIRS);
-                        entries.add(ModBlocks.RED_CRYSTALLIUM_CUT_STAIRS);
+
+                        entries.add(ModBlocks.WHITE_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.WHITE_CRYSTALLIUM_CUT);
+                        entries.add(ModBlocks.WHITE_CRYSTALLIUM_CUT_SLAB);
                         entries.add(ModBlocks.WHITE_CRYSTALLIUM_CUT_STAIRS);
+
+                        entries.add(ModBlocks.LIGHT_GRAY_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.LIGHT_GRAY_CRYSTALLIUM_CUT);
+                        entries.add(ModBlocks.LIGHT_GRAY_CRYSTALLIUM_CUT_SLAB);
+                        entries.add(ModBlocks.LIGHT_GRAY_CRYSTALLIUM_CUT_STAIRS);
+
+                        entries.add(ModBlocks.GRAY_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.GRAY_CRYSTALLIUM_CUT);
+                        entries.add(ModBlocks.GRAY_CRYSTALLIUM_CUT_SLAB);
+                        entries.add(ModBlocks.GRAY_CRYSTALLIUM_CUT_STAIRS);
+
+                        entries.add(ModBlocks.BLACK_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.BLACK_CRYSTALLIUM_CUT);
+                        entries.add(ModBlocks.BLACK_CRYSTALLIUM_CUT_SLAB);
+                        entries.add(ModBlocks.BLACK_CRYSTALLIUM_CUT_STAIRS);
+
+                        entries.add(ModBlocks.BROWN_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.BROWN_CRYSTALLIUM_CUT);
+                        entries.add(ModBlocks.BROWN_CRYSTALLIUM_CUT_SLAB);
+                        entries.add(ModBlocks.BROWN_CRYSTALLIUM_CUT_STAIRS);
+
+                        entries.add(ModBlocks.RED_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.RED_CRYSTALLIUM_CUT);
+                        entries.add(ModBlocks.RED_CRYSTALLIUM_CUT_SLAB);
+                        entries.add(ModBlocks.RED_CRYSTALLIUM_CUT_STAIRS);
+
+                        entries.add(ModBlocks.ORANGE_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.ORANGE_CRYSTALLIUM_CUT);
+                        entries.add(ModBlocks.ORANGE_CRYSTALLIUM_CUT_SLAB);
+                        entries.add(ModBlocks.ORANGE_CRYSTALLIUM_CUT_STAIRS);
+
+                        entries.add(ModBlocks.YELLOW_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.YELLOW_CRYSTALLIUM_CUT);
+                        entries.add(ModBlocks.YELLOW_CRYSTALLIUM_CUT_SLAB);
                         entries.add(ModBlocks.YELLOW_CRYSTALLIUM_CUT_STAIRS);
 
-                        entries.add(ModBlocks.SAPPHORIT_CRYSTALLIUM_CUT_SLAB);
-                        entries.add(ModBlocks.BLACK_CRYSTALLIUM_CUT_SLAB);
-                        entries.add(ModBlocks.BLUE_CRYSTALLIUM_CUT_SLAB);
-                        entries.add(ModBlocks.BROWN_CRYSTALLIUM_CUT_SLAB);
-                        entries.add(ModBlocks.CYAN_CRYSTALLIUM_CUT_SLAB);
-                        entries.add(ModBlocks.GRAY_CRYSTALLIUM_CUT_SLAB);
-                        entries.add(ModBlocks.GREEN_CRYSTALLIUM_CUT_SLAB);
-                        entries.add(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_CUT_SLAB);
-                        entries.add(ModBlocks.LIGHT_GRAY_CRYSTALLIUM_CUT_SLAB);
+                        entries.add(ModBlocks.LIME_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.LIME_CRYSTALLIUM_CUT);
                         entries.add(ModBlocks.LIME_CRYSTALLIUM_CUT_SLAB);
-                        entries.add(ModBlocks.MAGENTA_CRYSTALLIUM_CUT_SLAB);
-                        entries.add(ModBlocks.ORANGE_CRYSTALLIUM_CUT_SLAB);
-                        entries.add(ModBlocks.PINK_CRYSTALLIUM_CUT_SLAB);
+                        entries.add(ModBlocks.LIME_CRYSTALLIUM_CUT_STAIRS);
+
+                        entries.add(ModBlocks.GREEN_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.GREEN_CRYSTALLIUM_CUT);
+                        entries.add(ModBlocks.GREEN_CRYSTALLIUM_CUT_SLAB);
+                        entries.add(ModBlocks.GREEN_CRYSTALLIUM_CUT_STAIRS);
+
+                        entries.add(ModBlocks.CYAN_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.CYAN_CRYSTALLIUM_CUT);
+                        entries.add(ModBlocks.CYAN_CRYSTALLIUM_CUT_SLAB);
+                        entries.add(ModBlocks.CYAN_CRYSTALLIUM_CUT_STAIRS);
+
+                        entries.add(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_CUT);
+                        entries.add(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_CUT_SLAB);
+                        entries.add(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_CUT_STAIRS);
+
+                        entries.add(ModBlocks.BLUE_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.BLUE_CRYSTALLIUM_CUT);
+                        entries.add(ModBlocks.BLUE_CRYSTALLIUM_CUT_SLAB);
+                        entries.add(ModBlocks.BLUE_CRYSTALLIUM_CUT_STAIRS);
+
+                        entries.add(ModBlocks.PURPLE_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.PURPLE_CRYSTALLIUM_CUT);
                         entries.add(ModBlocks.PURPLE_CRYSTALLIUM_CUT_SLAB);
-                        entries.add(ModBlocks.RED_CRYSTALLIUM_CUT_SLAB);
-                        entries.add(ModBlocks.WHITE_CRYSTALLIUM_CUT_SLAB);
-                        entries.add(ModBlocks.YELLOW_CRYSTALLIUM_CUT_SLAB);
+                        entries.add(ModBlocks.PURPLE_CRYSTALLIUM_CUT_STAIRS);
+
+                        entries.add(ModBlocks.MAGENTA_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.MAGENTA_CRYSTALLIUM_CUT);
+                        entries.add(ModBlocks.MAGENTA_CRYSTALLIUM_CUT_SLAB);
+                        entries.add(ModBlocks.MAGENTA_CRYSTALLIUM_CUT_STAIRS);
+
+                        entries.add(ModBlocks.PINK_CRYSTALLIUM_BLOCK);
+                        entries.add(ModBlocks.PINK_CRYSTALLIUM_CUT);
+                        entries.add(ModBlocks.PINK_CRYSTALLIUM_CUT_SLAB);
+                        entries.add(ModBlocks.PINK_CRYSTALLIUM_CUT_STAIRS);
+
                     }).build());
 
     public static void registerItemGroups() {

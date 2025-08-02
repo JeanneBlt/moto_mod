@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "motomod:block/sapphorit_lotus_crop_stage2"
+  }
+}

@@ -1,2 +1,4 @@
 // 1.21.5	-999999999-01-01T00:00:00	Moto Mod/Tags for minecraft:item
 30f79d807fa4a527c4dd4ce7238db9735fce02a1 data/minecraft/tags/item/trim_materials.json
+4fee00322c5ecc058158297a6939fb4d73a5439d data/motomod/tags/item/bike_helmet_repair.json
+9792f31f05190faa39cae92646ba13778d6a6ec5 data/motomod/tags/item/yellow_hat_repair.json

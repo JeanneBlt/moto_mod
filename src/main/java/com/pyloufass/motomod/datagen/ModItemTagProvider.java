@@ -25,5 +25,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
                 .add(ModItems.SAPPHORIT_SHARD);
 
+        getOrCreateTagBuilder(ModTags.Items.BIKE_HELMET_REPAIR)
+                .add(ModItems.BIKE_HELMET);
+
+        getOrCreateTagBuilder(ModTags.Items.YELLOW_HAT_REPAIR)
+                .add(ModItems.YELLOW_HAT);
     }
 }
