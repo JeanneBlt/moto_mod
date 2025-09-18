@@ -2,10 +2,10 @@ package com.pyloufass.motomod.item;
 
 import com.pyloufass.motomod.MotoMod;
 import com.pyloufass.motomod.block.ModBlocks;
+import com.pyloufass.motomod.entity.ModEntities;
 import com.pyloufass.motomod.item.custom.paintbrush.DyeBlockMappings;
 import com.pyloufass.motomod.item.custom.paintbrush.PaintBrushItem;
 import com.pyloufass.motomod.item.custom.ModArmorItem;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
@@ -14,7 +14,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
-import java.util.Map;
+
 import java.util.function.Function;
 
 public class ModItems {
@@ -22,6 +22,9 @@ public class ModItems {
     //items
     public static final Item SAPPHORIT_SHARD = registerItem("sapphorit_shard", Item::new);
     public static final Item SAPPHORIT_CARROT = registerItem("sapphorit_carrot", Item::new);
+
+    public static final Item MOTO_GOLEM_SPAWN_EGG = registerItem("moto_golem_spawn_egg",
+            setting -> new SpawnEggItem(ModEntities.MOTO, setting));
 
     public static final Item DRIVE_POTTERY_SHARD = registerItem("drive_pottery_shard", Item::new);
     public static final Item SAPPHORIT_KEY = registerItem("sapphorit_key", Item::new);

@@ -18,9 +18,13 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.motomod.sapphorit_shard_items"))
                     .entries((displayContext, entries) -> {
 
+//                        entries.add(ModItems.MOTO_GOLEM_SPAWN_EGG);
+
                         //armors
                         entries.add(ModItems.YELLOW_HAT);
                         entries.add(ModItems.BIKE_HELMET);
+
+                        entries.add(ModItems.MOTO_GOLEM_SPAWN_EGG);
 
                         //minerals
                         entries.add(ModItems.SAPPHORIT_SHARD);
@@ -62,6 +66,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SAPPHORIT_BLOCK);
                         entries.add(ModBlocks.SUSPICIOUS_SOUL_SAND);
                         entries.add(ModBlocks.SAPPHORIT_LOTUS);
+                        entries.add(ModBlocks.DASH_CARPET);
+                        entries.add(ModBlocks.GOLEM_ENGINE);
 
                         //crystallium blocks
                         entries.add(ModBlocks.SAPPHORIT_CRYSTALLIUM_BLOCK);

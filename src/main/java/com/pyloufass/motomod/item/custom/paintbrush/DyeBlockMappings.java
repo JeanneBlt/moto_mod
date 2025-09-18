@@ -47,13 +47,13 @@ public class DyeBlockMappings {
             map.put(BlockByColor.getShulkerBox(sourceColor), BlockByColor.getShulkerBox(targetColor));
 
             // Custom Crystallium blocks
-            map.put(BlockByColor.getCrystalliumBlock(sourceColor), ModBlocks.getCrystalliumBlock(targetColor));
+            map.put(BlockByColor.getCrystalliumBlock(sourceColor), BlockByColor.getCrystalliumBlock(targetColor));
 
-            map.put(BlockByColor.getCrystalliumCut(sourceColor), ModBlocks.getCrystalliumCut(targetColor));
+            map.put(BlockByColor.getCrystalliumCut(sourceColor), BlockByColor.getCrystalliumCut(targetColor));
 
-            map.put(BlockByColor.getCrystalliumCutSlab(sourceColor), ModBlocks.getCrystalliumCutSlab(targetColor));
+            map.put(BlockByColor.getCrystalliumCutSlab(sourceColor), BlockByColor.getCrystalliumCutSlab(targetColor));
 
-            map.put(BlockByColor.getCrystalliumCutStairs(sourceColor), ModBlocks.getCrystalliumCutStairs(targetColor));
+            map.put(BlockByColor.getCrystalliumCutStairs(sourceColor), BlockByColor.getCrystalliumCutStairs(targetColor));
         }
 
         return map;

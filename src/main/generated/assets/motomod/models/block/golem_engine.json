@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "motomod:block/golem_engine_bottom",
+    "side": "motomod:block/golem_engine_side",
+    "top": "motomod:block/golem_engine_top"
+  }
+}

@@ -1,5 +1,6 @@
 package com.pyloufass.motomod.item.custom.paintbrush;
 
+import com.pyloufass.motomod.MotoMod;
 import net.minecraft.block.*;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtOps;
@@ -47,6 +48,15 @@ public class PaintBrushItem extends Item {
         Block clickedBlock = oldState.getBlock();
 
         if (!PAINT_BRUSH_MAP.containsKey(clickedBlock) || world.isClient()) {
+            MotoMod.LOGGER.info("ne clique pas");
+        }
+        if (world.isClient()) {
+            MotoMod.LOGGER.info("appel côté client");
+        }
+        if (PAINT_BRUSH_MAP.containsKey(clickedBlock)) {
+            MotoMod.LOGGER.info("paint_brush_map contains: " + clickedBlock.getTranslationKey());
+        } else {
+            MotoMod.LOGGER.info("paint_brush_map ne contient pas: " + clickedBlock.getTranslationKey());
             return ActionResult.SUCCESS;
         }
 
@@ -81,6 +91,7 @@ public class PaintBrushItem extends Item {
             NbtCompound savedNbt = null;
 
             if (oldEntity instanceof ShulkerBoxBlockEntity) {
+                MotoMod.LOGGER.info("shulkerbox clicked");
                 savedNbt = oldEntity.createNbtWithId(registries);
             }
 

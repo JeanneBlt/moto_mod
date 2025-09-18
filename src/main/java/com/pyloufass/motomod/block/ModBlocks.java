@@ -31,6 +31,14 @@ public class ModBlocks {
             properties -> new Block(properties.strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
 
+    public static final Block WHEEL = registerBlock("wheel",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+
+    public static final Block GOLEM_ENGINE = registerBlock("golem_engine",
+            properties -> new Block(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+
     public static final Block SAPPHORIT_LOTUS_CROP = registerBlockWithoutBlockItem("sapphorit_lotus_crop",
             properties -> new LotusCropBlock(properties.noCollision()
                     .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.AMETHYST_CLUSTER)
@@ -231,6 +239,11 @@ public class ModBlocks {
     public static final Block YELLOW_CRYSTALLIUM_CUT_SLAB = registerBlock("yellow_crystallium_cut_slab",
             properties -> new SlabBlock(properties.strength(2f).requiresTool()));
 
+    public static final Block DASH_CARPET = registerBlock("dash_carpet",
+            properties -> new CarpetBlock(properties.strength(2f).requiresTool()));
+    public static final Block DASH_BLOCK = registerBlock("dash_block",
+            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
+
     public static final Block SUSPICIOUS_SOUL_SAND = registerBlock("suspicious_soul_sand",
             properties -> new SuspiciousSoulSand(
                     Blocks.SOUL_SAND,
@@ -239,90 +252,6 @@ public class ModBlocks {
                     properties.strength(4f).sounds(BlockSoundGroup.SOUL_SAND)
             )
     );
-
-    public static Block getCrystalliumBlock(DyeColor color) {
-        return switch (color) {
-            case BLACK -> BLACK_CRYSTALLIUM_BLOCK;
-            case BLUE -> BLUE_CRYSTALLIUM_BLOCK;
-            case BROWN -> BROWN_CRYSTALLIUM_BLOCK;
-            case CYAN -> CYAN_CRYSTALLIUM_BLOCK;
-            case GRAY -> GRAY_CRYSTALLIUM_BLOCK;
-            case GREEN -> GREEN_CRYSTALLIUM_BLOCK;
-            case LIGHT_BLUE -> LIGHT_BLUE_CRYSTALLIUM_BLOCK;
-            case LIGHT_GRAY -> LIGHT_GRAY_CRYSTALLIUM_BLOCK;
-            case LIME -> LIME_CRYSTALLIUM_BLOCK;
-            case MAGENTA -> MAGENTA_CRYSTALLIUM_BLOCK;
-            case ORANGE -> ORANGE_CRYSTALLIUM_BLOCK;
-            case PINK -> PINK_CRYSTALLIUM_BLOCK;
-            case PURPLE -> PURPLE_CRYSTALLIUM_BLOCK;
-            case RED -> RED_CRYSTALLIUM_BLOCK;
-            case WHITE -> WHITE_CRYSTALLIUM_BLOCK;
-            case YELLOW -> YELLOW_CRYSTALLIUM_BLOCK;
-        };
-    }
-
-    public static Block getCrystalliumCut(DyeColor color) {
-        return switch (color) {
-            case BLACK -> BLACK_CRYSTALLIUM_CUT;
-            case BLUE -> BLUE_CRYSTALLIUM_CUT;
-            case BROWN -> BROWN_CRYSTALLIUM_CUT;
-            case CYAN -> CYAN_CRYSTALLIUM_CUT;
-            case GRAY -> GRAY_CRYSTALLIUM_CUT;
-            case GREEN -> GREEN_CRYSTALLIUM_CUT;
-            case LIGHT_BLUE -> LIGHT_BLUE_CRYSTALLIUM_CUT;
-            case LIGHT_GRAY -> LIGHT_GRAY_CRYSTALLIUM_CUT;
-            case LIME -> LIME_CRYSTALLIUM_CUT;
-            case MAGENTA -> MAGENTA_CRYSTALLIUM_CUT;
-            case ORANGE -> ORANGE_CRYSTALLIUM_CUT;
-            case PINK -> PINK_CRYSTALLIUM_CUT;
-            case PURPLE -> PURPLE_CRYSTALLIUM_CUT;
-            case RED -> RED_CRYSTALLIUM_CUT;
-            case WHITE -> WHITE_CRYSTALLIUM_CUT;
-            case YELLOW -> YELLOW_CRYSTALLIUM_CUT;
-        };
-    }
-
-    public static Block getCrystalliumCutSlab(DyeColor color) {
-        return switch (color) {
-            case BLACK -> BLACK_CRYSTALLIUM_CUT_SLAB;
-            case BLUE -> BLUE_CRYSTALLIUM_CUT_SLAB;
-            case BROWN -> BROWN_CRYSTALLIUM_CUT_SLAB;
-            case CYAN -> CYAN_CRYSTALLIUM_CUT_SLAB;
-            case GRAY -> GRAY_CRYSTALLIUM_CUT_SLAB;
-            case GREEN -> GREEN_CRYSTALLIUM_CUT_SLAB;
-            case LIGHT_BLUE -> LIGHT_BLUE_CRYSTALLIUM_CUT_SLAB;
-            case LIGHT_GRAY -> LIGHT_GRAY_CRYSTALLIUM_CUT_SLAB;
-            case LIME -> LIME_CRYSTALLIUM_CUT_SLAB;
-            case MAGENTA -> MAGENTA_CRYSTALLIUM_CUT_SLAB;
-            case ORANGE -> ORANGE_CRYSTALLIUM_CUT_SLAB;
-            case PINK -> PINK_CRYSTALLIUM_CUT_SLAB;
-            case PURPLE -> PURPLE_CRYSTALLIUM_CUT_SLAB;
-            case RED -> RED_CRYSTALLIUM_CUT_SLAB;
-            case WHITE -> WHITE_CRYSTALLIUM_CUT_SLAB;
-            case YELLOW -> YELLOW_CRYSTALLIUM_CUT_SLAB;
-        };
-    }
-
-    public static Block getCrystalliumCutStairs(DyeColor color) {
-        return switch (color) {
-            case BLACK -> BLACK_CRYSTALLIUM_CUT_STAIRS;
-            case BLUE -> BLUE_CRYSTALLIUM_CUT_STAIRS;
-            case BROWN -> BROWN_CRYSTALLIUM_CUT_STAIRS;
-            case CYAN -> CYAN_CRYSTALLIUM_CUT_STAIRS;
-            case GRAY -> GRAY_CRYSTALLIUM_CUT_STAIRS;
-            case GREEN -> GREEN_CRYSTALLIUM_CUT_STAIRS;
-            case LIGHT_BLUE -> LIGHT_BLUE_CRYSTALLIUM_CUT_STAIRS;
-            case LIGHT_GRAY -> LIGHT_GRAY_CRYSTALLIUM_CUT_STAIRS;
-            case LIME -> LIME_CRYSTALLIUM_CUT_STAIRS;
-            case MAGENTA -> MAGENTA_CRYSTALLIUM_CUT_STAIRS;
-            case ORANGE -> ORANGE_CRYSTALLIUM_CUT_STAIRS;
-            case PINK -> PINK_CRYSTALLIUM_CUT_STAIRS;
-            case PURPLE -> PURPLE_CRYSTALLIUM_CUT_STAIRS;
-            case RED -> RED_CRYSTALLIUM_CUT_STAIRS;
-            case WHITE -> WHITE_CRYSTALLIUM_CUT_STAIRS;
-            case YELLOW -> YELLOW_CRYSTALLIUM_CUT_STAIRS;
-        };
-    }
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
         Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MotoMod.MOD_ID, name))));

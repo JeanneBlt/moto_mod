@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "motomod:block/dash_block"
+    }
+  }
+}
