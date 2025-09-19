@@ -4,10 +4,16 @@
   "item.motomod.sapphorit_carrot": "Sapphorit Carrot",
   "block.motomod.sapphorit_lotus": "Sapphorit Lotus",
 
+  "block.motomod.wheel": "Wheel",
+
   "item.motomod.drive_pottery_shard": "Drive Pottery Shard",
   "item.motomod.padma_pottery_shard": "Padma Pottery Shard",
   "item.motomod.sapphorit_key": "Sapphorit Key",
   "item.motomod.sunset_armor_trim_smithing_template": "Sunset Armor Trim Smithing Template",
+
+  "item.motomod.moto_golem_spawn_egg": "Moto Golem Spawn Egg",
+
+  "entity.motomod.moto": "Moto",
 
   "item.motomod.paintbrush_black": "Black Paintbrush",
   "item.motomod.paintbrush_blue": "Blue Paintbrush",

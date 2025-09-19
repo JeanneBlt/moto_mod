@@ -22,6 +22,8 @@ public class ModItemGroups {
                         entries.add(ModItems.YELLOW_HAT);
                         entries.add(ModItems.BIKE_HELMET);
 
+                        entries.add(ModItems.MOTO_GOLEM_SPAWN_EGG);
+
                         //minerals
                         entries.add(ModItems.SAPPHORIT_SHARD);
                         entries.add(ModItems.SAPPHORIT_CARROT);
@@ -62,6 +64,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SAPPHORIT_BLOCK);
                         entries.add(ModBlocks.SUSPICIOUS_SOUL_SAND);
                         entries.add(ModBlocks.SAPPHORIT_LOTUS);
+
+                        entries.add(ModBlocks.DASH_CARPET);
+                        entries.add(ModBlocks.GOLEM_ENGINE);
+
+                        entries.add(ModBlocks.WHEEL);
 
                         //crystallium blocks
                         entries.add(ModBlocks.SAPPHORIT_CRYSTALLIUM_BLOCK);

@@ -30,12 +30,14 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHORIT_BLOCK);
-
+        blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.DASH_BLOCK, ModBlocks.DASH_CARPET);
         blockStateModelGenerator.registerBrushableBlock(ModBlocks.SUSPICIOUS_SOUL_SAND);
 
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.SAPPHORIT_LOTUS_CROP, BlockStateModelGenerator.CrossType.NOT_TINTED,
                 LotusCropBlock.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerTintableCross(ModBlocks.SAPPHORIT_LOTUS, BlockStateModelGenerator.CrossType.TINTED);
+
+        blockStateModelGenerator.registerRotatable(ModBlocks.WHEEL);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHORIT_CRYSTALLIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLACK_CRYSTALLIUM_BLOCK);
@@ -55,6 +57,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WHITE_CRYSTALLIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.YELLOW_CRYSTALLIUM_BLOCK);
 
+        blockStateModelGenerator.registerSingleton(ModBlocks.GOLEM_ENGINE, TexturedModel.CUBE_BOTTOM_TOP);
 
         BlockStateModelGenerator.BlockTexturePool sapphoritCrystalliumCutPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SAPPHORIT_CRYSTALLIUM_CUT);
         sapphoritCrystalliumCutPool.stairs(ModBlocks.SAPPHORIT_CRYSTALLIUM_CUT_STAIRS);
@@ -119,6 +122,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SAPPHORIT_KEY, Models.GENERATED);
         itemModelGenerator.register(ModItems.SAPPHORIT_SHARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.SUNSET_ARMOR_TRIM_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MOTO_GOLEM_SPAWN_EGG, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.PAINTBRUSH_BLACK, Models.GENERATED);
         itemModelGenerator.register(ModItems.PAINTBRUSH_BLUE, Models.GENERATED);
@@ -139,7 +143,6 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.registerArmor(ModItems.BIKE_HELMET, ModArmorMaterials.BIKE_HELMET_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.YELLOW_HAT, ModArmorMaterials.YELLOW_HAT_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
-
 
     }
 }
