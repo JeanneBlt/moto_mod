@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "motomod:block/sapphorit_crystallium_cut",
-    "side": "motomod:block/sapphorit_crystallium_cut",
-    "top": "motomod:block/sapphorit_crystallium_cut"
-  }
-}

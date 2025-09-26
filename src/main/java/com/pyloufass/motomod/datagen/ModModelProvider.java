@@ -37,7 +37,7 @@ public class ModModelProvider extends FabricModelProvider {
                 LotusCropBlock.AGE, 0, 1, 2, 3);
         blockStateModelGenerator.registerTintableCross(ModBlocks.SAPPHORIT_LOTUS, BlockStateModelGenerator.CrossType.TINTED);
 
-        blockStateModelGenerator.registerRotatable(ModBlocks.WHEEL);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.WHEEL);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHORIT_CRYSTALLIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLACK_CRYSTALLIUM_BLOCK);

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "motomod:block/green_crystallium_cut",
-    "side": "motomod:block/green_crystallium_cut",
-    "top": "motomod:block/green_crystallium_cut"
-  }
-}

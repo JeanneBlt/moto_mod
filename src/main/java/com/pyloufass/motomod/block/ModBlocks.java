@@ -37,7 +37,7 @@ public class ModBlocks {
                     .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
 
     public static final Block WHEEL = registerBlock("wheel",
-            properties -> new WheelBlock(properties.strength(4f)
+            properties -> new WheelBlock(properties.strength(4f).nonOpaque()
                     .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
 
     public static final Block SAPPHORIT_LOTUS_CROP = registerBlockWithoutBlockItem("sapphorit_lotus_crop",

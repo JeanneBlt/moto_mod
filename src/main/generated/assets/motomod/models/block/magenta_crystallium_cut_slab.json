@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "motomod:block/magenta_crystallium_cut",
-    "side": "motomod:block/magenta_crystallium_cut",
-    "top": "motomod:block/magenta_crystallium_cut"
-  }
-}
