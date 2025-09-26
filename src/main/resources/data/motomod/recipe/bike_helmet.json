@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:armadillo_scute",
+    "X": "minecraft:glass"
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "motomod:bike_helmet"
+  }
+}

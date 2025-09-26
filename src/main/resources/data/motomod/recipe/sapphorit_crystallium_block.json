@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "motomod:sapphorit_shard",
+    "X": "motomod:sapphorit_lotus",
+    "T": "minecraft:iron_ingot"
+  },
+  "pattern": [
+    "T#T",
+    "#X#",
+    "T#T"
+  ],
+  "result": {
+    "count": 6,
+    "id": "motomod:sapphorit_crystallium_block"
+  }
+}

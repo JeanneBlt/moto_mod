@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:archaeology",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "motomod:item",
+          "name": "motomod:sapphorit_shard",
+          "weight": 5
+        },
+        {
+          "type": "motomod:block",
+          "name": "motomod:sapphorit_lotus",
+          "weight": 2.5
+        },
+        {
+          "type": "motomod:item",
+          "name": "motomod:sapphorit_seed",
+          "weight": 15
+        }
+      ]
+    }
+  ]
+}
