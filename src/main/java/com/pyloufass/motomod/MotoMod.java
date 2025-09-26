@@ -6,6 +6,7 @@ import com.pyloufass.motomod.component.ModDataComponentTypes;
 import com.pyloufass.motomod.entity.ModEntities;
 import com.pyloufass.motomod.entity.custom.MotoEntity;
 import com.pyloufass.motomod.item.ModItems;
+import com.pyloufass.motomod.sound.ModSounds;
 import com.pyloufass.motomod.status.ModStatus;
 import net.fabricmc.api.ModInitializer;
 import com.pyloufass.motomod.item.ModItemGroups;
@@ -28,6 +29,8 @@ public class MotoMod implements ModInitializer {
 		ModItems.registerModItems();
 
 		ModDataComponentTypes.registerDataComponentTypes();
+
+		ModSounds.registerSounds();
 
 		ModStatus.registerEffects();
 

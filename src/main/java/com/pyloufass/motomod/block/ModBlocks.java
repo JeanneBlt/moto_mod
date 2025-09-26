@@ -1,9 +1,8 @@
 package com.pyloufass.motomod.block;
 
 import com.pyloufass.motomod.MotoMod;
-import com.pyloufass.motomod.block.custom.LotusCropBlock;
-import com.pyloufass.motomod.block.custom.SuspiciousSoulSand;
-import com.pyloufass.motomod.block.custom.WheelBlock;
+import com.pyloufass.motomod.block.custom.*;
+import com.pyloufass.motomod.sound.ModSounds;
 import com.pyloufass.motomod.status.ModStatus;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
@@ -39,6 +38,14 @@ public class ModBlocks {
     public static final Block WHEEL = registerBlock("wheel",
             properties -> new WheelBlock(properties.strength(4f).nonOpaque()
                     .requiresTool().sounds(BlockSoundGroup.COPPER_BULB)));
+
+    public static final Block DASH_CARPET = registerBlock("dash_carpet",
+            properties -> new DashCarpet(properties.strength(4f).nonOpaque()
+                    .requiresTool().sounds(ModSounds.FART_SOUNDS)));
+
+    public static final Block YELLOW_HAT_BLOCK = registerBlock("yellow_hat_block",
+            properties -> new YellowHatBlock(properties.strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.GRASS)));
 
     public static final Block SAPPHORIT_LOTUS_CROP = registerBlockWithoutBlockItem("sapphorit_lotus_crop",
             properties -> new LotusCropBlock(properties.noCollision()
@@ -238,11 +245,6 @@ public class ModBlocks {
     public static final Block WHITE_CRYSTALLIUM_CUT_SLAB = registerBlock("white_crystallium_cut_slab",
             properties -> new SlabBlock(properties.strength(2f).requiresTool()));
     public static final Block YELLOW_CRYSTALLIUM_CUT_SLAB = registerBlock("yellow_crystallium_cut_slab",
-            properties -> new SlabBlock(properties.strength(2f).requiresTool()));
-
-    public static final Block DASH_CARPET = registerBlock("dash_carpet",
-            properties -> new CarpetBlock(properties.strength(2f).requiresTool()));
-    public static final Block DASH_BLOCK = registerBlock("dash_block",
             properties -> new SlabBlock(properties.strength(2f).requiresTool()));
 
     public static final Block SUSPICIOUS_SOUL_SAND = registerBlock("suspicious_soul_sand",

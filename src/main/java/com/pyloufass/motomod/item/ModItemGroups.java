@@ -19,7 +19,7 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
 
                         //armors
-                        entries.add(ModItems.YELLOW_HAT);
+                        entries.add(ModBlocks.YELLOW_HAT_BLOCK);
                         entries.add(ModItems.BIKE_HELMET);
 
                         entries.add(ModItems.MOTO_GOLEM_SPAWN_EGG);

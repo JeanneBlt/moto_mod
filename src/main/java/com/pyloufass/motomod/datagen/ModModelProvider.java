@@ -30,7 +30,6 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHORIT_BLOCK);
-        blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.DASH_BLOCK, ModBlocks.DASH_CARPET);
         blockStateModelGenerator.registerBrushableBlock(ModBlocks.SUSPICIOUS_SOUL_SAND);
 
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.SAPPHORIT_LOTUS_CROP, BlockStateModelGenerator.CrossType.NOT_TINTED,
@@ -38,6 +37,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(ModBlocks.SAPPHORIT_LOTUS, BlockStateModelGenerator.CrossType.TINTED);
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.WHEEL);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.DASH_CARPET);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.YELLOW_HAT_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHORIT_CRYSTALLIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLACK_CRYSTALLIUM_BLOCK);
@@ -142,7 +145,5 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PAINTBRUSH_YELLOW, Models.GENERATED);
 
         itemModelGenerator.registerArmor(ModItems.BIKE_HELMET, ModArmorMaterials.BIKE_HELMET_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
-        itemModelGenerator.registerArmor(ModItems.YELLOW_HAT, ModArmorMaterials.YELLOW_HAT_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
-
     }
 }

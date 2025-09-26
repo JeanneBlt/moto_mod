@@ -5,6 +5,7 @@
   "block.motomod.sapphorit_lotus": "Sapphorit Lotus",
 
   "block.motomod.wheel": "Wheel",
+  "block.motomod.golem_engine": "Golem Engine",
 
   "item.motomod.drive_pottery_shard": "Drive Pottery Shard",
   "item.motomod.padma_pottery_shard": "Padma Pottery Shard",
@@ -38,6 +39,8 @@
   "effect.motomod.colorfull": "You're colorfull!",
 
   "block.motomod.suspicious_soul_sand": "Suspicious Soul Sand",
+
+  "block.motomod.dash_carpet": "Dash Carpet",
 
   "block.motomod.sapphorit_block": "Sapphorit",
 

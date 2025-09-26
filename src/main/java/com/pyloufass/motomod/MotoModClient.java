@@ -19,6 +19,9 @@ public class MotoModClient implements ClientModInitializer {
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.SAPPHORIT_LOTUS_CROP);
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.SAPPHORIT_LOTUS);
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.YELLOW_HAT_BLOCK, RenderLayer.getCutout());
+
         BlockEntityRendererFactories.register(ModBlockEntities.SUSPICIOUS_SOUL_SAND_ENTITY, SuspiciousSoulSandEntityRenderer::new);
 
         EntityModelLayerRegistry.registerModelLayer(MotoModel.MOTO, MotoModel::getTexturedModelData);

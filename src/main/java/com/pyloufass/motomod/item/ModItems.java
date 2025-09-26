@@ -7,6 +7,7 @@ import com.pyloufass.motomod.item.custom.paintbrush.DyeBlockMappings;
 import com.pyloufass.motomod.item.custom.paintbrush.PaintBrushItem;
 import com.pyloufass.motomod.item.custom.ModArmorItem;
 import net.minecraft.block.Blocks;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
@@ -35,6 +36,10 @@ public class ModItems {
 
     public static final Item SAPPHORIT_SEED = registerItem("sapphorit_seed",
             setting -> new BlockItem(ModBlocks.SAPPHORIT_LOTUS_CROP, setting));
+
+    public static final Item YELLOW_HAT = registerItem("yellow_hat",
+            setting -> new BlockItem(ModBlocks.YELLOW_HAT_BLOCK, setting.maxCount(1)
+                    .equippable(EquipmentSlot.HEAD)));
 
     //paintbrushes
     public static final Item PAINTBRUSH_BLACK = registerItem("paintbrush_black", setting -> new PaintBrushItem(setting.maxDamage(32),
@@ -72,8 +77,8 @@ public class ModItems {
 
 
     //armors
-    public static final Item YELLOW_HAT = registerItem("yellow_hat",
-            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.YELLOW_HAT_MATERIAL, EquipmentType.HELMET)));
+//    public static final Item YELLOW_HAT = registerItem("yellow_hat",
+//            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.YELLOW_HAT_MATERIAL, EquipmentType.HELMET)));
     public static final Item BIKE_HELMET = registerItem("bike_helmet",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.BIKE_HELMET_MATERIAL, EquipmentType.HELMET)));
 
