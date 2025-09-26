@@ -1,6 +1,9 @@
 package com.pyloufass.motomod.item.custom.paintbrush;
 import com.pyloufass.motomod.block.ModBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.util.DyeColor;
 
 import java.util.HashMap;
@@ -55,6 +58,22 @@ public class DyeBlockMappings {
 
             map.put(BlockByColor.getCrystalliumCutStairs(sourceColor), ModBlocks.getCrystalliumCutStairs(targetColor));
         }
+
+        //special cases
+
+        // terracotta
+        map.put(Blocks.TERRACOTTA, BlockByColor.getTerracotta(targetColor));
+
+        // sapphorit crystallium
+        map.put(ModBlocks.SAPPHORIT_CRYSTALLIUM_BLOCK, ModBlocks.getCrystalliumBlock(targetColor));
+
+        //candle
+        map.put(Blocks.CANDLE, BlockByColor.getCandle(targetColor));
+        map.put(Blocks.CANDLE_CAKE, BlockByColor.getCandleCake(targetColor));
+
+        //glass
+        map.put(Blocks.GLASS, BlockByColor.getStainedGlass(targetColor));
+        map.put(Blocks.GLASS_PANE, BlockByColor.getStainedGlassPane(targetColor));
 
         return map;
     }

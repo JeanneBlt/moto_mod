@@ -1,5 +1,6 @@
 package com.pyloufass.motomod.item.custom.paintbrush;
 
+import com.pyloufass.motomod.MotoMod;
 import net.minecraft.block.*;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtOps;

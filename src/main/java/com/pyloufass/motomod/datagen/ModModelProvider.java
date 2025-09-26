@@ -46,8 +46,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CYAN_CRYSTALLIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRAY_CRYSTALLIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GREEN_CRYSTALLIUM_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LIGHT_GRAY_CRYSTALLIUM_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LIGHT_BLUE_CRYSTALLIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LIME_CRYSTALLIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAGENTA_CRYSTALLIUM_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ORANGE_CRYSTALLIUM_BLOCK);
