@@ -1,9 +1,8 @@
 package com.pyloufass.motomod.item.custom;
 
 import com.google.common.collect.ImmutableMap;
+import com.pyloufass.motomod.effect.ModEffects;
 import com.pyloufass.motomod.item.ModArmorMaterials;
-import com.pyloufass.motomod.status.ColorfullStatus;
-import com.pyloufass.motomod.status.ModStatus;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.EquippableComponent;
 import net.minecraft.entity.Entity;
@@ -25,7 +24,7 @@ public class ModArmorItem extends Item {
     private static final Map<ArmorMaterial, List<StatusEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, List<StatusEffectInstance>>())
                     .put(ModArmorMaterials.YELLOW_HAT_MATERIAL,
-                            List.of(new StatusEffectInstance(ModStatus.COLORFULL, 99999999, 0, false, true)))
+                            List.of(new StatusEffectInstance(ModEffects.STICKY, 99999999, 0, false, true)))
                     .build();
 
 

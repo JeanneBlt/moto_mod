@@ -36,7 +36,7 @@
   "item.motomod.yellow_hat": "Yellow Hat",
   "item.motomod.bike_helmet": "Bike Helmet",
 
-  "effect.motomod.colorfull": "You're colorfull!",
+  "effect.motomod.sticky": "Sticky",
 
   "block.motomod.suspicious_soul_sand": "Suspicious Soul Sand",
 
@@ -115,6 +115,13 @@
   "block.motomod.red_crystallium_cut_slab": "Red Cristallium Slab",
   "block.motomod.white_crystallium_cut_slab": "White Cristallium Slab",
   "block.motomod.yellow_crystallium_cut_slab": "Yellow Cristallium Slab",
+
+  "painting.motomod.garden.title": "Garden",
+  "painting.motomod.garden.author": "TrisTLB",
+  "painting.motomod.girl_in_fire.title": "Girl In Fire",
+  "painting.motomod.girl_in_fire.author": "TrisTLB",
+  "painting.motomod.girlfriends.title": "Girlfriends",
+  "painting.motomod.girlfriends.author": "TrisTLB",
 
   "itemgroup.motomod.sapphorit_block":  "Moto Mod Blocks",
   "itemgroup.motomod.sapphorit_shard_items": "Moto Mod Items"

@@ -1,4 +1,4 @@
-package com.pyloufass.motomod.status;
+package com.pyloufass.motomod.effect;
 
 import com.pyloufass.motomod.MotoMod;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
@@ -10,9 +10,12 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
-public class ModStatus {
-    public static final RegistryEntry<StatusEffect> COLORFULL = registerStatusEffect("colorfull",
-            new ColorfullStatus(StatusEffectCategory.NEUTRAL, 0xe6e6fa));
+public class ModEffects {
+    public static final RegistryEntry<StatusEffect> STICKY = registerStatusEffect("sticky",
+            new StickyEffect(StatusEffectCategory.NEUTRAL, 0x36ebab)
+                    .addAttributeModifier(EntityAttributes.MOVEMENT_SPEED,
+                            Identifier.of(MotoMod.MOD_ID, "sticky"), -0.25f,
+                            EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
 
     private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {
